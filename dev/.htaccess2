@@ -1,0 +1,61 @@
+RewriteEngine On
+RewriteRule ^/$ index.php?lang=pt&select=inicio
+RewriteRule ^pt$ index.php?lang=pt&select=inicio
+RewriteRule ^en$ index.php?lang=en&select=home
+
+RewriteRule ^pt/(inicio|home)$ index.php?lang=pt&select=inicio
+RewriteRule ^en/(inicio|home)$ index.php?lang=en&select=home
+
+RewriteRule ^pt/(maquina|machines)$ productos.php?mode=produtos&lang=pt&select=maquina&page=home
+RewriteRule ^en/(maquina|machines)$ productos.php?mode=produtos&lang=en&select=machines&page=home
+
+
+
+RewriteRule ^pt/(maquina|machines)/([0-9]+)/(.*)$ produto.php?id=$2&mode=produto&lang=pt&select=maquina
+RewriteRule ^en/(maquina|machines)/([0-9]+)/(.*)$ produto.php?id=$2&mode=produto&lang=en&select=machines
+
+RewriteRule ^(pt)/(maquina|machines)/((.*))$ productos_1.php?mode=produtos&lang=$1&select=maquina&page=home&cat=$3
+RewriteRule ^(en)/(maquina|machines)/((.*))$ productos_1.php?mode=produtos&lang=$1&select=machines&page=home&cat=$3
+
+RewriteRule ^(pt|en)/software$ productos_1.php?mode=softwares&lang=$1&select=software&page=software
+
+RewriteRule ^(pt|en)/strassshop$ compostos.php?id=1&mode=composto&lang=$1&select=strassshop
+
+RewriteRule ^(pt|en)/software/([0-9]+)/(.*)$ produto.php?id=$2&mode=software&lang=$1&select=software
+
+RewriteRule ^(en)/(noticias|news)/([0-9]+)/((.*)+)$ new.php?id=$3&mode=post&lang=$1&select=news
+RewriteRule ^(pt)/(noticias|news)/([0-9]+)/((.*)+)$ new.php?id=$3&mode=post&lang=$1&select=noticias
+
+RewriteRule ^(pt)/(noticias|news)$ news.php?lang=$1&mode=post&select=noticias
+RewriteRule ^(en)/(noticias|news)$ news.php?lang=$1&mode=post&select=news
+
+RewriteRule ^(pt)/(noticias|news)/((.*)+)$ news.php?sub=$3&mode=post&lang=$1&select=noticias
+RewriteRule ^(en)/(noticias|news)/((.*)+)$ news.php?sub=$3&mode=post&lang=$1&select=news
+
+RewriteRule ^(pt)/(contatos|contacts)$ contatos.php?lang=$1&select=contatos
+RewriteRule ^(en)/(contatos|contacts)$ contatos.php?lang=$1&select=contacts
+
+RewriteRule ^(pt|en)/(empresa|about-us)$ empresa.php?lang=$1&select=$2
+
+RewriteRule ^(pt|en)/(termos|terms)$ privacidade.php?lang=$1&page=privacidade
+RewriteRule ^(pt|en)/(recrutamento|work)$ recrutamento.php?lang=$1&page=recrutamento
+
+RewriteRule ^en/sendmessplus$ dinamicCont.php?lang=en
+RewriteRule ^pt/sendmessplus$ dinamicCont.php?lang=pt
+
+RewriteRule ^messages$ dinamicCont.php
+
+RewriteRule ^(pt|en)/sendnews$ dinamicCont.php?lang=$1
+RewriteRule ^sendmess$ /
+
+RewriteRule ^en/traini$ garantia.php?lang=en&page=Formacao
+RewriteRule ^pt/traini$ garantia.php?lang=pt&page=Formacao
+
+RewriteRule ^en/warran$ garantia.php?lang=en&page=garantia
+RewriteRule ^pt/warran$ garantia.php?lang=pt&page=garantia
+
+RewriteRule ^en/rd$ garantia.php?lang=en&page=Desenvolvimento
+RewriteRule ^pt/rd$ garantia.php?lang=pt&page=Desenvolvimento
+
+RewriteRule ^en/assist$ garantia.php?lang=en&page=assistencia
+RewriteRule ^pt/assist$ garantia.php?lang=pt&page=assistencia

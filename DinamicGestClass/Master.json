@@ -1,0 +1,4175 @@
+{
+    "JCURSOS": {
+        "table": "workshops",
+        "name": "workshops",
+        "submenu": ["Ficha", "Notas", "Mensagens"],
+        "admin": {
+            "private": {
+                "toke": {
+                    "type": null,
+                    "name": "ID",
+                    "db": "id_workshop",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "icon": {
+                    "type": null,
+                    "name": "Icon",
+                    "db": "fotos_workshop",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identifier": {
+                    "type": null,
+                    "name": "Nome",
+                    "db": "nome",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "notes": {
+                    "type": null,
+                    "name": "Notas",
+                    "db": "notas_workshops",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "publish": {
+                    "type": "L_CHECKB",
+                    "name": "Publicar",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": ["facebook"]
+                },
+                "order": {
+                    "type": null,
+                    "name": "order index",
+                    "db": "order_index",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "folder": {
+                    "type": "S_INPUT",
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "status": {
+                    "type": "S_RADIOB",
+                    "name": "Estado",
+                    "db": "estado",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "offline": "offline",
+                        "online": "online"
+                    }
+                }
+            },
+            "public": {
+                "name": "Dados de Gestão",
+                "date": {
+                    "type": "S_DATE",
+                    "name": "Inserido",
+                    "db": "data",
+                    "help": "Data em que o contacto foi inserido.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                },
+                "date_act": {
+                    "type": "S_DATE",
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "help": "Data em que o contato foi atualizado pela última vez.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                }
+            }
+        },
+        "fields": {
+            "wdata": {
+                "name": "Dados",
+                "day": {
+                    "type": "L_DATE",
+                    "name": "Data de inicío",
+                    "db": "dia_inicio",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": false,
+                            "fill": false
+                        },
+                        "att": {
+                            "placeholder": "dd-mm-aaaa"
+                        }
+                    }
+                },
+                "hour": {
+                    "type": "L_INPUT",
+                    "name": "Hora de inicío",
+                    "db": "hora_inicio",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "number_hours": {
+                    "type": "L_INPUT",
+                    "name": "Numero de horas",
+                    "db": "numero_horas",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "limit_inscri": {
+                    "type": "L_DATE",
+                    "name": "Inscrição até:",
+                    "db": "data_inscricao",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": false,
+                            "fill": false
+                        },
+                        "att": {
+                            "placeholder": "dd-mm-aaaa"
+                        }
+                    }
+                },
+                "number_people": {
+                    "type": "L_INPUT",
+                    "name": "Numero de participantes",
+                    "db": "max_participantes",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "teacher": {
+                    "type": "L_DATALIST",
+                    "name": "Formador",
+                    "db": "formador",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                },
+                "local": {
+                    "type": "L_DATALIST",
+                    "name": "Local",
+                    "db": "local",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                }
+            },
+            "pt": {
+                "name": "Workshop",
+                "keywords": {
+                    "type": "L_TSEO",
+                    "name": "Palavras chave",
+                    "db": "palavras_chave",
+                    "help": "SEO",
+                    "text": "palavras chave",
+                    "options": {
+                        "data-type": "countwords",
+                        "data-divider": ","
+                    }
+                },
+                "seotitle": {
+                    "type": "L_ISEO",
+                    "name": "Titulo",
+                    "db": "titulo_seo",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 170
+                    }
+                },
+                "meta-description": {
+                    "type": "L_TSEO",
+                    "name": "Meta Descrição",
+                    "db": "meta_descricao",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 170
+                    }
+                },
+                "call_action": {
+                    "type": "L_DSEO",
+                    "name": "Texto formulário",
+                    "db": "call_to_action",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Nome",
+                    "db": "nome",
+                    "help": "LINE",
+                    "text": "",
+                    "options": ""
+                },
+                "intro": {
+                    "type": "L_TEXTAREA",
+                    "name": "Descrição curta",
+                    "db": "introducao",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 200
+                    }
+                },
+                "introduction": {
+                    "type": "L_EDITDIV",
+                    "name": "Descrição",
+                    "db": "descricao",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "description": {
+                    "type": "L_EDITDIV",
+                    "name": "Programa",
+                    "db": "programa",
+                    "help": "",
+                    "text": "DIV",
+                    "options": null
+                }
+            },
+            "en": {
+                "name": "Workshop",
+                "keywords": {
+                    "type": "L_TSEO",
+                    "name": "Palavras chave",
+                    "db": "palavras_chave_en",
+                    "help": "SEO",
+                    "text": "palavras chave",
+                    "options": {
+                        "data-type": "countwords",
+                        "data-divider": ","
+                    }
+                },
+                "seotitle": {
+                    "type": "L_ISEO",
+                    "name": "Titulo",
+                    "db": "titulo_seo_en",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 170
+                    }
+                },
+                "meta-description": {
+                    "type": "L_TSEO",
+                    "name": "Meta Descrição",
+                    "db": "meta_descricao_en",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 170
+                    }
+                },
+                "call_action": {
+                    "type": "L_DSEO",
+                    "name": "Texto formulário",
+                    "db": "call_to_action_en",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Nome",
+                    "db": "nome_en",
+                    "help": "LINE",
+                    "text": "",
+                    "options": ""
+                },
+                "intro": {
+                    "type": "L_TEXTAREA",
+                    "name": "Descrição curta",
+                    "db": "introducao_en",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 200
+                    }
+                },
+                "introduction": {
+                    "type": "L_EDITDIV",
+                    "name": "Descrição",
+                    "db": "descricao_en",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "description": {
+                    "type": "L_EDITDIV",
+                    "name": "Programa",
+                    "db": "programa_en",
+                    "help": "",
+                    "text": "DIV",
+                    "options": null
+                }
+            }
+        },
+        "midia": {
+
+            "midia": {
+                "name": "Imagens e Video",
+                "images": {
+                    "type": "L_IMAGE",
+                    "name": "Imagens",
+                    "db": "fotos_workshop",
+                    "help": "",
+                    "text": "[ tamanho recomendado: 1200px X 640px ]",
+                    "options": {
+                        "image_name": "work_image",
+                        "captions": "work_captions",
+                        "data-size": 2
+                    }
+                },
+                "video": {
+                    "type": "L_VIDEO",
+                    "name": "Video",
+                    "db": "video",
+                    "help": "",
+                    "text": "",
+                    "options": "class='dveditmanagf'"
+                }
+            }
+        },
+        "export": {
+            "pt": {
+                "condition": "estado='online'",
+                "columns": ["nome", "descricao", "programa"],
+                "url": "http://kyusho.pt/pt/cursos",
+                "param": ["id_workshop", "nome"],
+                "anchor_text": "Saiba mais..."
+            },
+            "en": {
+                "condition": "estado='online'",
+                "columns": ["nome_en", "descricao_en", "programa_en"],
+                "url": "http://kyusho.pt/en/course",
+                "param": ["id_workshop", "nome_en"],
+                "anchor_text": "Read more..."
+            }
+        },
+        "search": {
+            "query": {
+                "toke": "id_workshop",
+                "date": "data",
+                "date_act": "data_act",
+                "status": "estado",
+                "name": ["nome", "nome_en"],
+                "prog": ["programa", "programa_en"],
+                "descri": ["descricao", "descricao_en"],
+                "forma": "formador",
+                "data_insc": "data_inscricao"
+            },
+            "fields": "data_act,nome,estado",
+            "order": "nome",
+            "toke": "id_workshop"
+        },
+        "link": {
+            "pt": {
+                "url": "http://kyusho.pt/pt/cursos",
+                "param": ["id_workshop", "nome"]
+            },
+            "en": {
+                "url": "http://kyusho.pt/en/course",
+                "param": ["id_workshop", "nome_en"]
+            }
+        }
+    },
+    "JTCURSOS": {
+        "table": "workshops_types",
+        "name": "workshops_types",
+        "submenu": ["Ficha", "Notas", "Mensagens"],
+        "admin": {
+            "private": {
+                "toke": {
+                    "type": null,
+                    "name": "ID",
+                    "db": "id_workshop",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "icon": {
+                    "type": null,
+                    "name": "Icon",
+                    "db": "fotos_workshop",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identifier": {
+                    "type": null,
+                    "name": "Nome",
+                    "db": "nome",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "notes": {
+                    "type": null,
+                    "name": "Notas",
+                    "db": "notas_workshops",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "publish": {
+                    "type": "L_CHECKB",
+                    "name": "Publicar",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": ["facebook"]
+                },
+                "order": {
+                    "type": null,
+                    "name": "order index",
+                    "db": "order_index",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "folder": {
+                    "type": "S_INPUT",
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "status": {
+                    "type": "S_RADIOB",
+                    "name": "Estado",
+                    "db": "estado",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "offline": "offline",
+                        "online": "online"
+                    }
+                }
+            },
+            "public": {
+                "name": "Dados de Gestão",
+                "date": {
+                    "type": "S_DATE",
+                    "name": "Inserido",
+                    "db": "data",
+                    "help": "Data em que o contacto foi inserido.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                },
+                "date_act": {
+                    "type": "S_DATE",
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "help": "Data em que o contato foi atualizado pela última vez.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                }
+            }
+        },
+        "fields": {
+            "pt": {
+                "name": "Tipo de formação",
+                "keywords": {
+                    "type": "L_TSEO",
+                    "name": "Palavras chave",
+                    "db": "palavras_chave",
+                    "help": "SEO",
+                    "text": "palavras chave",
+                    "options": {
+                        "data-type": "countwords",
+                        "data-divider": ","
+                    }
+                },
+                "seotitle": {
+                    "type": "L_ISEO",
+                    "name": "Titulo",
+                    "db": "titulo_seo",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 170
+                    }
+                },
+                "meta-description": {
+                    "type": "L_TSEO",
+                    "name": "Meta Descrição",
+                    "db": "meta_descricao",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 170
+                    }
+                },
+                "call_action": {
+                    "type": "L_DSEO",
+                    "name": "Texto formulário",
+                    "db": "call_to_action",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Nome",
+                    "db": "nome",
+                    "help": "LINE",
+                    "text": "",
+                    "options": ""
+                },
+                "intro": {
+                    "type": "L_TEXTAREA",
+                    "name": "Descrição curta",
+                    "db": "introducao",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 200
+                    }
+                },
+                "introduction": {
+                    "type": "L_EDITDIV",
+                    "name": "Descrição",
+                    "db": "descricao",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "description": {
+                    "type": "L_EDITDIV",
+                    "name": "Programa",
+                    "db": "programa",
+                    "help": "",
+                    "text": "DIV",
+                    "options": null
+                }
+            },
+            "en": {
+                "name": "Type of training",
+                "keywords": {
+                    "type": "L_TSEO",
+                    "name": "Palavras chave",
+                    "db": "palavras_chave_en",
+                    "help": "SEO",
+                    "text": "palavras chave",
+                    "options": {
+                        "data-type": "countwords",
+                        "data-divider": ","
+                    }
+                },
+                "seotitle": {
+                    "type": "L_ISEO",
+                    "name": "Titulo",
+                    "db": "titulo_seo_en",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 170
+                    }
+                },
+                "meta-description": {
+                    "type": "L_TSEO",
+                    "name": "Meta Descrição",
+                    "db": "meta_descricao_en",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 170
+                    }
+                },
+                "call_action": {
+                    "type": "L_DSEO",
+                    "name": "Texto formulário",
+                    "db": "call_to_action_en",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Nome",
+                    "db": "nome_en",
+                    "help": "LINE",
+                    "text": "",
+                    "options": ""
+                },
+                "intro": {
+                    "type": "L_TEXTAREA",
+                    "name": "Descrição curta",
+                    "db": "introducao_en",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 200
+                    }
+                },
+                "introduction": {
+                    "type": "L_EDITDIV",
+                    "name": "Descrição",
+                    "db": "descricao_en",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "description": {
+                    "type": "L_EDITDIV",
+                    "name": "Programa",
+                    "db": "programa_en",
+                    "help": "",
+                    "text": "DIV",
+                    "options": null
+                }
+            }
+        },
+        "midia": {
+
+            "midia": {
+                "name": "Imagens e Video",
+                "images": {
+                    "type": "L_IMAGE",
+                    "name": "Imagens",
+                    "db": "fotos_workshop",
+                    "help": "",
+                    "text": "[ tamanho recomendado: 1200px X 640px ]",
+                    "options": {
+                        "image_name": "work_image",
+                        "captions": "work_captions",
+                        "data-size": 2
+                    }
+                },
+                "video": {
+                    "type": "L_VIDEO",
+                    "name": "Video",
+                    "db": "video",
+                    "help": "",
+                    "text": "",
+                    "options": "class='dveditmanagf'"
+                }
+            }
+        },
+        "export": {
+            "pt": {
+                "condition": "estado='online'",
+                "columns": ["nome", "descricao", "programa"],
+                "url": "http://kyusho.pt/pt/cursos",
+                "param": ["id_workshop", "nome"],
+                "anchor_text": "Saiba mais..."
+            },
+            "en": {
+                "condition": "estado='online'",
+                "columns": ["nome_en", "descricao_en", "programa_en"],
+                "url": "http://kyusho.pt/en/course",
+                "param": ["id_workshop", "nome_en"],
+                "anchor_text": "Read more..."
+            }
+        },
+        "search": {
+            "query": {
+                "toke": "id_workshop",
+                "date": "data",
+                "date_act": "data_act",
+                "status": "estado",
+                "name": ["nome", "nome_en"],
+                "prog": ["programa", "programa_en"],
+                "descri": ["descricao", "descricao_en"]
+            },
+            "fields": "data_act,nome,estado",
+            "order": "nome",
+            "toke": "id_workshop"
+        },
+        "link": {
+            "pt": {
+                "url": "http://kyusho.pt/pt/cursos",
+                "param": ["id_workshop", "nome"]
+            },
+            "en": {
+                "url": "http://kyusho.pt/en/course",
+                "param": ["id_workshop", "nome_en"]
+            }
+        }
+    },
+    "JSEMINARIOS": {
+        "table": "portfolio",
+        "name": "seminarios",
+        "submenu": ["Ficha", "Notas"],
+        "admin": {
+            "private": {
+                "toke": {
+                    "type": null,
+                    "name": "ID",
+                    "db": "id_portfolio",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "icon": {
+                    "type": null,
+                    "name": "Icon",
+                    "db": "fotos_portfolio",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identifier": {
+                    "type": null,
+                    "name": "Nome",
+                    "db": "nome",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "notes": {
+                    "type": null,
+                    "name": null,
+                    "db": "notas_portfolio",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "publish": {
+                    "type": "L_CHECKB",
+                    "name": "Publicar",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": ["facebook"]
+                },
+                "order": {
+                    "type": null,
+                    "name": "order index",
+                    "db": "order_index",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "folder": {
+                    "type": "S_INPUT",
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "status": {
+                    "type": "S_RADIOB",
+                    "name": "Estado",
+                    "db": "estado",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "offline": "offline",
+                        "online": "online"
+                    }
+                }
+            },
+            "public": {
+                "name": "Dados de Gestão",
+                "date": {
+                    "type": "S_DATE",
+                    "name": "Inserido",
+                    "db": "data",
+                    "help": "Data em que o contacto foi inserido.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                },
+                "date_act": {
+                    "type": "S_DATE",
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "help": "Data em que o contato foi atualizado pela última vez.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                }
+            }
+        },
+        "fields": {
+            "pt": {
+                "name": "Seminário",
+                "keywords": {
+                    "type": "L_TSEO",
+                    "name": "Palavras chave",
+                    "db": "palavras_chave",
+                    "help": "SEO",
+                    "text": "palavras chave",
+                    "options": {
+                        "data-type": "countwords",
+                        "data-divider": ","
+                    }
+                },
+                "seotitle": {
+                    "type": "L_ISEO",
+                    "name": "Titulo",
+                    "db": "titulo_seo",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 170
+                    }
+                },
+                "meta-description": {
+                    "type": "L_TSEO",
+                    "name": "Meta Descrição",
+                    "db": "meta_descricao",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 170
+                    }
+                },
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Nome",
+                    "db": "nome",
+                    "help": "LINE",
+                    "text": "",
+                    "options": ""
+                },
+                "introduction": {
+                    "type": "L_EDITDIV",
+                    "name": "Descrição",
+                    "db": "apresentacao",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "tags": {
+                    "type": "L_EDITDIV",
+                    "name": "Tags",
+                    "db": "tags",
+                    "help": "Palavras-chave que possam ser utilizadas para encontrar esta página.",
+                    "text": "tags",
+                    "options": {
+                        "data-type": "countwords",
+                        "data-divider": ","
+                    }
+                }
+            },
+            "en": {
+                "name": "Seminar",
+                "keywords": {
+                    "type": "L_TSEO",
+                    "name": "Palavras chave",
+                    "db": "palavras_chave_en",
+                    "help": "SEO",
+                    "text": "palavras chave",
+                    "options": {
+                        "data-type": "countwords",
+                        "data-divider": ","
+                    }
+                },
+                "seotitle": {
+                    "type": "L_ISEO",
+                    "name": "Titulo",
+                    "db": "titulo_seo_en",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 170
+                    }
+                },
+                "meta-description": {
+                    "type": "L_TSEO",
+                    "name": "Meta Descrição",
+                    "db": "meta_descricao_en",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 170
+                    }
+                },
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Nome",
+                    "db": "nome_en",
+                    "help": "LINE",
+                    "text": "",
+                    "options": ""
+                },
+                "introduction": {
+                    "type": "L_EDITDIV",
+                    "name": "Descrição",
+                    "db": "apresentacao_en",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "tags": {
+                    "type": "L_EDITDIV",
+                    "name": "Tags",
+                    "db": "tags_en",
+                    "help": "",
+                    "text": "tags",
+                    "options": {
+                        "data-type": "countwords",
+                        "data-divider": ","
+                    }
+                }
+            }
+        },
+        "midia": {
+
+            "midia": {
+                "name": "Imagens e Video",
+                "images": {
+                    "type": "L_IMAGE",
+                    "name": "Imagens",
+                    "db": "fotos_portfolio",
+                    "help": "",
+                    "text": "[ tamanho recomendado: 1200px X 640px ]",
+                    "options": {
+                        "image_name": "seminario_image",
+                        "captions": "seminario_captions",
+                        "data-size": 50
+                    }
+                },
+                "video": {
+                    "type": "L_VIDEO",
+                    "name": "Video",
+                    "db": "video",
+                    "help": "",
+                    "text": "",
+                    "options": "class='dveditmanagf'"
+                }
+            }
+        },
+        "export": {
+            "pt": {
+                "condition": "estado='online'",
+                "columns": ["nome", "apresentacao"],
+                "url": "http://kyusho.pt/pt/eventos",
+                "param": ["id_portfolio", "nome"],
+                "anchor_text": "Saiba mais..."
+            },
+            "en": {
+                "condition": "estado='online'",
+                "columns": ["nome_en", "apresentacao_en"],
+                "url": "http://kyusho.pt/en/seminar",
+                "param": ["id_portfolio", "nome_en"],
+                "anchor_text": "Read more..."
+            }
+        },
+        "search": {
+            "query": {
+                "date": "data",
+                "date_act": "data_act",
+                "status": "estado",
+                "name": ["nome", "nome_en"],
+                "descri": ["apresentacao", "apresentacao_en"],
+                "tags": ["tags", "tags_en"]
+            },
+            "fields": "data_act,nome,estado",
+            "order": "nome",
+            "toke": "id_portfolio"
+        },
+        "link": {
+            "pt": {
+                "url": "http://kyusho.pt/pt/eventos",
+                "param": ["id_portofolio", "nome"]
+            },
+            "en": {
+                "url": "http://kyusho.pt/en/seminar",
+                "param": ["id_portfolio", "nome_en"]
+            }
+        }
+    },
+    "JNEWS": {
+        "table": "news",
+        "name": "news",
+        "submenu": ["Ficha", "Notas"],
+        "admin": {
+            "private": {
+                "toke": {
+                    "type": null,
+                    "name": "ID",
+                    "db": "id_noticia",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "icon": {
+                    "type": null,
+                    "name": "Icon",
+                    "db": "fotos_noticia",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identifier": {
+                    "type": null,
+                    "name": "Nome",
+                    "db": "titulo_noticia",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "notes": {
+                    "type": null,
+                    "name": "Notas",
+                    "db": "notas_news",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "publish": {
+                    "type": "L_CHECKB",
+                    "name": "Publicar",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": ["facebook"]
+                },
+                "order": {
+                    "type": null,
+                    "name": "order index",
+                    "db": null,
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "folder": {
+                    "type": "S_INPUT",
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "status": {
+                    "type": "S_RADIOB",
+                    "name": "Estado",
+                    "db": "estado",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "offline": "offline",
+                        "online": "online"
+                    }
+                }
+            },
+            "public": {
+                "name": "Dados de Gestão",
+                "date": {
+                    "type": "S_DATE",
+                    "name": "Inserido",
+                    "db": "data_noticia",
+                    "help": "Data em que o contacto foi inserido.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                },
+                "date_act": {
+                    "type": "S_DATE",
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "help": "Data em que o contato foi atualizado pela última vez.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                },
+                "destak": {
+                    "type": "L_CHECKB",
+                    "name": "Destaque",
+                    "db": "destaque",
+                    "help": "",
+                    "text": "",
+                    "options": ["destaque"]
+                }
+            }
+        },
+        "fields": {
+            "news_format": {
+                "name": "Formato noticia",
+                "format": {
+                    "type": "L_RADIOB",
+                    "name": "Formato",
+                    "db": "formato_noticia",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "news1": "<img src='imagens/news1.png'>",
+                        "news2": "<img src='imagens/news2.png'>",
+                        "news3": "<img src='imagens/news3.png'>",
+                        "news4": "<img src='imagens/news4.png'>",
+                        "news5": "<img src='imagens/news_5.png'>",
+                        "news6": "<img src='imagens/news_6.png'>",
+                        "news7": "<img src='imagens/news_7.png'>"
+                    }
+                }
+            },
+            "pt": {
+                "name": "Noticia",
+                "keywords": {
+                    "type": "L_TSEO",
+                    "name": "Palavras chave",
+                    "db": "palavras_chave",
+                    "help": "SEO",
+                    "text": "palavras chave",
+                    "options": {
+                        "data-type": "countwords",
+                        "data-divider": ","
+                    }
+                },
+                "meta-description": {
+                    "type": "L_TSEO",
+                    "name": "Meta Descrição",
+                    "db": "descricao_seo",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 170
+                    }
+                },
+                "topic": {
+                    "type": "L_DATALIST",
+                    "name": "Topico",
+                    "db": "categoria",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                },
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Titulo",
+                    "db": "titulo_noticia",
+                    "help": "",
+                    "text": "",
+                    "options": ""
+                },
+                "subtitle": {
+                    "type": "L_INPUT",
+                    "name": "Subtitulo",
+                    "db": "subtitulo_noticia",
+                    "help": "",
+                    "text": "",
+                    "options": ""
+                },
+                "author": {
+                    "type": "L_DATALIST",
+                    "name": "Autor",
+                    "db": "autor_noticia",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                },
+                "text": {
+                    "type": "L_EDITDIV",
+                    "name": "Texto",
+                    "db": "texto_noticia",
+                    "help": "",
+                    "text": "",
+                    "options": ""
+                }
+            },
+            "en": {
+                "name": "News",
+                "keywords": {
+                    "type": "L_TSEO",
+                    "name": "Palavras chave",
+                    "db": "palavras_chave_en",
+                    "help": "SEO",
+                    "text": "palavras chave",
+                    "options": {
+                        "data-type": "countwords",
+                        "data-divider": ","
+                    }
+                },
+                "meta-description": {
+                    "type": "L_TSEO",
+                    "name": "Meta Descrição",
+                    "db": "descricao_seo_en",
+                    "help": "",
+                    "text": "caracteres disponiveis",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 170
+                    }
+                },
+                "topic": {
+                    "type": "L_DATALIST",
+                    "name": "Topic",
+                    "db": "categoria_en",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                },
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Title",
+                    "db": "titulo_noticia_en",
+                    "help": "",
+                    "text": "",
+                    "options": ""
+                },
+                "subtitle": {
+                    "type": "L_INPUT",
+                    "name": "Subtitle",
+                    "db": "subtitulo_noticia_en",
+                    "help": "",
+                    "text": "",
+                    "options": ""
+                },
+                "author": {
+                    "type": "L_DATALIST",
+                    "name": "Author",
+                    "db": "autor_noticia_en",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                },
+                "text": {
+                    "type": "L_EDITDIV",
+                    "name": "Text",
+                    "db": "texto_noticia_en",
+                    "help": "",
+                    "text": "",
+                    "options": ""
+                }
+            }
+        },
+        "midia": {
+            "midia": {
+                "name": "Imagens e Video",
+                "images": {
+                    "type": "L_IMAGE",
+                    "name": "Imagens",
+                    "db": "fotos_noticia",
+                    "help": "",
+                    "text": "[ tamanho recomendado: 1200px X 640px ]",
+                    "options": {
+                        "image_name": "news_image",
+                        "captions": "news_captions",
+                        "data-size": 3
+                    }
+                },
+                "video": {
+                    "type": "L_VIDEO",
+                    "name": "Video",
+                    "db": "video_noticias",
+                    "help": "",
+                    "text": "",
+                    "options": ""
+                }
+            }
+        },
+        "export": {
+            "pt": {
+                "condition": "estado='online'",
+                "columns": ["titulo_noticia", "subtitulo_noticia", "texto_noticia"],
+                "url": "http://kyusho.pt/pt/noticia",
+                "param": ["id_noticia", "titulo_noticia"],
+                "anchor_text": "Saiba mais..."
+            },
+            "en": {
+                "condition": "estado='online'",
+                "columns": ["titulo_noticia_en", "subtitulo_noticia_en", "texto_noticia_en"],
+                "url": "http://kyusho.pt/en/news",
+                "param": ["id_noticia", "titulo_noticia_en"],
+                "anchor_text": "Read more..."
+            }
+        },
+        "search": {
+            "query": {
+                "ide": "id_noticia",
+                "date": "data_noticia",
+                "date_act": "data_act",
+                "status": "estado",
+                "category": ["categoria", "categoria_en"],
+                "title": ["titulo_noticia", "titulo_noticia_en"],
+                "author": ["autor_noticia", "autor_noticia_en"],
+                "subtitle": ["subtitulo_noticia", "subtitulo_noticia_en"]
+            },
+            "fields": "data_act,titulo_noticia,categoria",
+            "order": "titulo_noticia",
+            "toke": "id_noticia"
+        },
+        "link": {
+            "pt": {
+                "url": "http://kyusho.pt/pt/noticia",
+                "param": ["id_noticia", "titulo_noticia"]
+            },
+            "en": {
+                "url": "http://kyusho.pt/en/news",
+                "param": ["id_noticia", "titulo_noticia_en"]
+            }
+        }
+    },
+    "JCONTACTS": {
+        "table": "contactos",
+        "name": "contacts",
+        "submenu": ["Ficha", "Notas", "Mensagens"],
+        "admin": {
+            "private": {
+                "toke": {
+                    "type": null,
+                    "name": "ID",
+                    "db": "id",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "icon": {
+                    "type": null,
+                    "name": "Icon",
+                    "db": "imagem",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identifier": {
+                    "type": null,
+                    "name": "Nome",
+                    "db": "nome, apelido",
+                    "help": "",
+                    "text": "",
+                    "options": "mail"
+                },
+                "notes": {
+                    "type": null,
+                    "name": "",
+                    "db": "notas_contatos",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "publish": {
+                    "type": null,
+                    "name": "Publicar",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "order": {
+                    "type": null,
+                    "name": "order index",
+                    "db": null,
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "folder": {
+                    "type": "S_INPUT",
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "status": {
+                    "type": "S_RADIOB",
+                    "name": "Estado",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            },
+            "public": {
+                "name": "Dados de Gestão",
+                "date": {
+                    "type": "S_DATE",
+                    "name": "Inserido",
+                    "db": "data",
+                    "help": "Data em que o contacto foi inserido.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                },
+                "date_act": {
+                    "type": "S_DATE",
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "help": "Data em que o contato foi atualizado pela última vez.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                },
+                "relation": {
+                    "type": "S_DATALIST",
+                    "name": "Relacionamento",
+                    "db": "relacionamento",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ["Colaborador", "Cliente", "novo"]
+                    }
+                },
+                "category": {
+                    "type": "S_RADIOB",
+                    "name": "Categoria",
+                    "db": "categoria",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "pessoa": "pessoa",
+                        "empresa": "empresa"
+                    }
+                },
+                "send_news": {
+                    "name": "Recebe newsletter",
+                    "db": "send_news",
+                    "type": 0,
+                    "target": "",
+                    "options": "",
+                    "att_outside": ""
+                }
+            }
+        },
+        "fields": {
+            "personal": {
+                "name": "Dados pessoais",
+                "title": {
+                    "type": "S_INPUT",
+                    "name": "Nome",
+                    "db": "nome",
+                    "help": "",
+                    "text": "",
+                    "options": ""
+                },
+                "surname": {
+                    "type": "S_INPUT",
+                    "name": "Apelido",
+                    "db": "apelido",
+                    "help": "",
+                    "text": "",
+                    "options": ""
+                },
+                "birthday": {
+                    "type": "S_DATE",
+                    "name": "Nascimento",
+                    "db": "data_nascimento",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": false,
+                            "fill": false
+                        },
+                        "att": {
+                            "placeholder": "dd-mm-aaaa"
+                        }
+                    }
+                },
+                "sex": {
+                    "type": "S_SELECT",
+                    "name": "Sexo",
+                    "db": "sexo",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "dynamic": null,
+                        "static": {
+                            "values": {
+                                "masculino": "masculino",
+                                "feminino": "feminino"
+                            }
+                        }
+                    }
+                },
+                "civil": {
+                    "type": "S_DATALIST",
+                    "name": "Estado civil",
+                    "db": "estado_civil",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ["Solteiro", "Casado", "Divorciado", "Viuvo"]
+                    }
+                },
+                "education": {
+                    "type": "S_DATALIST",
+                    "name": "Escolaridade",
+                    "db": "escolaridade",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                },
+                "profession": {
+                    "type": "S_DATALIST",
+                    "name": "Profissão",
+                    "db": "profissao",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                }
+            },
+            "comuns": {
+                "mail": {
+                    "type": "S_INPUT",
+                    "name": "E-mail",
+                    "db": "mail",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "webpage": {
+                    "type": "S_INPUT",
+                    "name": "webpage",
+                    "db": "web",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "placeholder": "http://www.exemplo.com"
+                    }
+                },
+                "skype": {
+                    "type": "S_INPUT",
+                    "name": "skype",
+                    "db": "skype",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "facebook": {
+                    "type": "S_INPUT",
+                    "name": "facebook",
+                    "db": "facebook",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "linkedin": {
+                    "type": "S_INPUT",
+                    "name": "linkedin",
+                    "db": "linkedin",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "twitter": {
+                    "type": "S_INPUT",
+                    "name": "twitter",
+                    "db": "twitter",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "google": {
+                    "type": "S_INPUT",
+                    "name": "google +",
+                    "db": "google_plus",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "other": {
+                    "type": "S_INPUT",
+                    "name": "Rede social",
+                    "db": "outra_rede",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "phone": {
+                    "type": "S_INPUT",
+                    "name": "telefone",
+                    "db": "telefone",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "fax": {
+                    "type": "S_INPUT",
+                    "name": "fax",
+                    "db": "fax",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "cell1": {
+                    "type": "S_INPUT",
+                    "name": "Telemóvel 1",
+                    "db": "telemovel",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "cell2": {
+                    "type": "S_INPUT",
+                    "name": "Telemóvel 2",
+                    "db": "telemovel2",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "cell3": {
+                    "type": "S_INPUT",
+                    "name": "Telemóvel 3",
+                    "db": "telemovel3",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "nif": {
+                    "type": "S_INPUT",
+                    "name": "NIF",
+                    "db": "contribuinte",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "country": {
+                    "type": "S_DATALIST",
+                    "name": "Pais",
+                    "db": "pais",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "state",
+                        "values": ""
+                    }
+                },
+                "state": {
+                    "type": "S_DATALIST",
+                    "name": "Distrito",
+                    "db": "distrito",
+                    "text": "",
+                    "options": {
+                        "target": "city",
+                        "values": ""
+                    }
+                },
+                "city": {
+                    "type": "S_DATALIST",
+                    "name": "Cidade",
+                    "db": "cidade",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "village",
+                        "values": ""
+                    }
+                },
+                "village": {
+                    "type": "S_DATALIST",
+                    "name": "Freguesia",
+                    "db": "freguesia",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                },
+                "address": {
+                    "type": "S_INPUT",
+                    "name": "Endereço",
+                    "db": "rua",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "postal": {
+                    "type": "S_INPUT",
+                    "name": "Código postal",
+                    "db": "c_postal",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "profile": {
+                    "type": "L_EDITDIV",
+                    "name": "Perfil",
+                    "db": "observacoes",
+                    "help": "",
+                    "text": "Numero de palavras chave (separar por virgula \",\"): ",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-divider": "/",
+                        "data-length": "15"
+                    }
+                },
+                "tags": {
+                    "type": "L_TEXTAREA",
+                    "name": "Grupos",
+                    "db": "tags",
+                    "help": "",
+                    "text": "class='tx75px22xLFF dveditmanag' contenteditable=true",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-divider": "-",
+                        "data-length": 200
+                    }
+                }
+            },
+            "prof": {
+                "name": "Dados profissionais",
+                "company": {
+                    "type": "L_SELECT",
+                    "name": "Empresa",
+                    "db": "empresa",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "dynamic": {
+                            "table": "contactos",
+                            "values": {
+                                "nome": "id"
+                            },
+                            "condition": "WHERE categoria='empresa' AND nome<>''"
+                        },
+                        "static": null
+                    }
+                },
+                "department": {
+                    "type": "S_DATALIST",
+                    "name": "Departamento",
+                    "db": "departamento",
+                    "help": "DATALIST",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                },
+                "job": {
+                    "type": "S_DATALIST",
+                    "name": "Cargo",
+                    "db": "cargo",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "targe": "",
+                        "values": ""
+                    }
+                }
+            },
+            "company": {
+                "name": "Dados empresa",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Empresa",
+                    "db": "nome",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "birthday": {
+                    "type": "S_DATE",
+                    "name": "Fundação",
+                    "db": "data_nascimento",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": false,
+                            "fill": false
+                        },
+                        "att": {
+                            "placeholder": "dd-mm-aaaa"
+                        }
+                    }
+                },
+                "business": {
+                    "type": "S_DATALIST",
+                    "name": "Negócio",
+                    "db": "ramo_actividade",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                }
+            }
+        },
+        "midia": {
+            "midia": {
+                "name": "Foto",
+                "image": {
+                    "type": "L_IMAGE",
+                    "name": "Foto",
+                    "db": "imagem",
+                    "help": "",
+                    "text": "[ tamanho recomendado: 1200px X 640px ]",
+                    "options": {
+                        "image_name": "foto_contato",
+                        "captions": null,
+                        "data-size": 1
+                    }
+                }
+            }
+        },
+        "export": null,
+        "search": {
+            "query": {
+                "date": "data",
+                "date_act": "data_act",
+                "folder": "pasta",
+                "category": "categoria",
+                "relation": "relacionamento",
+                "mail": "mail",
+                "webpage": "web",
+                "phone": "telefone",
+                "cell1": "telemóvel 1",
+                "nif": "contribuinte",
+                "country": "pais",
+                "state": "distrito",
+                "city": "cidade",
+                "village": "freguesia",
+                "postal": "c_postal",
+                "name": "nome",
+                "birthday": "data_nascimento",
+                "sex": "sexo",
+                "company": "empresa",
+                "business": "ramo_actividade"
+            },
+            "fields": "nome,apelido,mail",
+            "order": "nome",
+            "toke": "id"
+        },
+        "links": null
+    },
+    "JCOMPANY": {
+        "table": "principal",
+        "name": "empresa",
+        "submenu": null,
+        "admin": {
+            "private": {
+                "toke": {
+                    "type": null,
+                    "name": "ID",
+                    "db": "id",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "icon": {
+                    "type": null,
+                    "name": "Icon",
+                    "db": "logotipo",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identifier": {
+                    "type": null,
+                    "name": "Nome",
+                    "db": "nome_comercial",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "notes": {
+                    "type": null,
+                    "name": "Notas",
+                    "db": null,
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "publish": {
+                    "type": null,
+                    "name": "Publicar",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": ["facebook"]
+                },
+                "order": {
+                    "type": null,
+                    "name": "order index",
+                    "db": "order_index",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "folder": {
+                    "type": null,
+                    "name": "Pasta",
+                    "db": null,
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "status": {
+                    "type": null,
+                    "name": "Estado",
+                    "db": null,
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "offline": "offline",
+                        "online": "online"
+                    }
+                }
+            },
+            "public": {
+                "name": "Dados de Gestão",
+                "date": {
+                    "type": null,
+                    "name": "Inserido",
+                    "db": null,
+                    "help": "Data em que o contacto foi inserido.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                },
+                "date_act": {
+                    "type": "S_DATE",
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "help": "Data em que o contato foi atualizado pela última vez.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                }
+            }
+        },
+        "fields": {
+            "comuns": {
+                "name": "Dados da Empresa",
+                "mark": {
+                    "type": "L_INPUT",
+                    "name": "Marca",
+                    "db": "firma",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "company": {
+                    "type": "L_INPUT",
+                    "name": "Nome",
+                    "db": "nome_comercial",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "adress": {
+                    "type": "S_INPUT",
+                    "name": "Morada",
+                    "db": "morada",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "comp": {
+                    "type": "S_INPUT",
+                    "name": "Complemento",
+                    "db": "complemento",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "village": {
+                    "type": "S_INPUT",
+                    "name": "Freguesia",
+                    "db": "freguesia",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "city": {
+                    "type": "S_INPUT",
+                    "name": "Cidade",
+                    "db": "cidade",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "postal": {
+                    "type": "S_INPUT",
+                    "name": "Código postal",
+                    "db": "cp",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "country": {
+                    "type": "S_INPUT",
+                    "name": "Pais",
+                    "db": "pais",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "mail": {
+                    "type": "S_INPUT",
+                    "name": "E-mail",
+                    "db": "mail",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "phone": {
+                    "type": "S_INPUT",
+                    "name": "Telefone",
+                    "db": "telefone",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "fax": {
+                    "type": "S_INPUT",
+                    "name": "Fax",
+                    "db": "fax",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "cell_1": {
+                    "type": "S_INPUT",
+                    "name": "Telemóvel 1",
+                    "db": "telemovel1",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "cell_2": {
+                    "type": "S_INPUT",
+                    "name": "Telemóvel 2",
+                    "db": "telemovel2",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "cell_3": {
+                    "type": "S_INPUT",
+                    "name": "Telemóvel 3",
+                    "db": "telemovel2",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "gps": {
+                    "type": "S_INPUT",
+                    "name": "GPS",
+                    "db": "gps",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "nif": {
+                    "type": "S_INPUT",
+                    "name": "Contribuinte",
+                    "db": "contribuinte",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            },
+            "pt": {
+                "name": "Sobre a empresa",
+                "aboutus": {
+                    "type": "L_EDITDIV",
+                    "name": "Quem somos",
+                    "db": "quem_somos",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "mission": {
+                    "type": "L_EDITDIV",
+                    "name": "Missão",
+                    "db": "missao",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            },
+            "en": {
+                "name": "Sobre a empresa",
+                "aboutus": {
+                    "type": "L_EDITDIV",
+                    "name": "Quem somos",
+                    "db": "quem_somos_en",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "mission": {
+                    "type": "L_EDITDIV",
+                    "name": "Missão",
+                    "db": "missao_en",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            }
+        },
+        "midia": {
+            "midia": {
+                "name": "Imagens e Video",
+                "logo": {
+                    "type": "L_IMAGE",
+                    "name": "Logotipo",
+                    "db": "logotipo",
+                    "help": "",
+                    "text": "[ tamanho recomendado: 1200px X 640px ]",
+                    "options": {
+                        "image_name": "logo_image",
+                        "captions": "logo_captions",
+                        "data-size": 1
+                    }
+                },
+                "company_images": {
+                    "type": "L_IMAGE",
+                    "name": "Página empresa",
+                    "db": "foto_empresa",
+                    "help": "",
+                    "text": "[ tamanho recomendado: 1200px X 640px ]",
+                    "options": {
+                        "image_name": "comp_image",
+                        "captions": "comp_captions",
+                        "data-size": 1
+                    }
+                },
+                "contact_images": {
+                    "type": "L_IMAGE",
+                    "name": "Págima contatos",
+                    "db": "foto_contactos",
+                    "help": "",
+                    "text": "[ tamanho recomendado: 1200px X 640px ]",
+                    "options": {
+                        "image_name": "cont_image",
+                        "captions": "cont_captions",
+                        "data-size": 1
+                    }
+                },
+                "video": null
+            }
+        },
+        "export": {
+            "comum": {
+                "name": "workshops",
+                "table": "workshops",
+                "toke": "id_workshop",
+                "date": "data_act",
+                "image": "fotos_workshop",
+                "conditions": {
+                    "estado": "online"
+                }
+            },
+            "pt": {
+                "name": "Cursos",
+                "title": "nome",
+                "text": "descricao",
+                "link": "pt/cursos",
+                "shortlink": "c"
+            },
+            "en": {
+                "name": "Training",
+                "title": "nome_en",
+                "text": "descricao_en",
+                "image": "fotos_workshop",
+                "link": "en/training",
+                "shortlink": "t"
+            }
+        },
+        "search": {
+            "query": {
+                "date": "data",
+                "date_act": "data_act",
+                "status": "estado",
+                "name": ["nome", "nome_en"],
+                "prog": ["programa", "programa_en"],
+                "descri": ["descricao", "descricao_en"],
+                "forma": "formador",
+                "data_insc": "data_inscricao"
+            },
+            "fields": "data_act,nome,estado",
+            "order": "nome",
+            "toke": "id_workshop"
+        },
+        "link": {
+            "pt": {
+                "url": "http://kyusho.pt/pt/cursos",
+                "param": ["id_workshop", "nome"]
+            },
+            "en": {
+                "url": "http://kyusho.pt/en/course",
+                "param": ["id_workshop", "nome_en"]
+            }
+        }
+    },
+    "JEMPLOYEES": {
+        "table": "colaboradores",
+        "name": "contacts",
+        "submenu": null,
+        "admin": {
+            "private": {
+                "toke": {
+                    "type": null,
+                    "name": "ID",
+                    "db": "id_contacto",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "icon": {
+                    "type": null,
+                    "name": "Icon",
+                    "db": null,
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identifier": {
+                    "type": null,
+                    "name": "Nome",
+                    "db": "nome",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "notes": {
+                    "type": null,
+                    "name": "Notas",
+                    "db": null,
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "publish": {
+                    "type": null,
+                    "name": "Publicar",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": ["facebook"]
+                },
+                "order": {
+                    "type": null,
+                    "name": "order index",
+                    "db": "order_index",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "folder": {
+                    "type": null,
+                    "name": "Pasta",
+                    "db": null,
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "status": {
+                    "type": "S_RADIOB",
+                    "name": "Estado",
+                    "db": "estado",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "offline": "offline",
+                        "online": "online"
+                    }
+                }
+            },
+            "public": {
+                "name": "Dados de Gestão",
+                "date": {
+                    "type": "S_DATE",
+                    "name": "Inserido",
+                    "db": "data",
+                    "help": "Data em que o contacto foi inserido.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                },
+                "date_act": {
+                    "type": null,
+                    "name": "Atualizado",
+                    "db": null,
+                    "help": "Data em que o contato foi atualizado pela última vez.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                }
+            }
+        },
+        "fields": {
+            "access": {
+                "name": "Dados de acesso",
+                "level": {
+                    "type": "L_SELECT",
+                    "name": "Nivel de acesso",
+                    "db": "tipo_user",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "dynamic": null,
+                        "static": {
+                            "values": {
+                                "nivel 1": "1",
+                                "nivel 2": "2",
+                                "nivel 3": "3",
+                                "nivel 4": "4"
+                            }
+                        }
+                    }
+                },
+                "nick": {
+                    "type": "S_INPUT",
+                    "name": "Nick",
+                    "db": "nick",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "pass": {
+                    "type": "S_INPUT",
+                    "name": "Senha",
+                    "db": "senha",
+                    "help": "",
+                    "text": "<img src='imagens/adicionar22.png' data-action='pass' data-target='access_pass' class='ig10MR'>",
+                    "options": null
+                }
+            },
+            "pt": {
+                "name": "Kyusho dados online",
+                "art": {
+                    "type": "L_DATALIST",
+                    "name": "Arte marcial",
+                    "db": "arte_marcial",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                },
+                "graduation": {
+                    "type": "L_DATALIST",
+                    "name": "Graduação na arte marcial",
+                    "db": "grau_arte",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                },
+                "job": {
+                    "type": "L_DATALIST",
+                    "name": "Cargo na Eka",
+                    "db": "cargo_eka",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                },
+                "level": {
+                    "type": "L_SELECT",
+                    "name": "Nivel Eka",
+                    "db": "nivel_eka",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "dynamic": "",
+                        "static": {
+                            "values": {
+                                "nivel 0": "0",
+                                "nivel 1": "1",
+                                "nivel 2": "2",
+                                "nivel 3": "3",
+                                "nivel 4": "4",
+                                "nivel 5": "5",
+                                "nivel 6": "6",
+                                "nivel 7": "7",
+                                "nivel 8": "8",
+                                "nivel 9": "9",
+                                "nivel 10": "10"
+                            }
+                        }
+                    }
+                },
+                "cv": {
+                    "type": "L_EDITDIV",
+                    "name": "Curriculum",
+                    "db": "curriculum",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            },
+            "en": {
+                "name": "Kyusho dados online",
+                "art": {
+                    "type": "L_DATALIST",
+                    "name": "Martial art",
+                    "db": "arte_marcial_en",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                },
+                "graduation": {
+                    "type": "L_DATALIST",
+                    "name": "Graduation in martial art",
+                    "db": "grau_arte_en",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                },
+                "job": {
+                    "type": "L_DATALIST",
+                    "name": "Eka job title",
+                    "db": "cargo_eka_en",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "",
+                        "values": ""
+                    }
+                },
+                "level": {
+                    "type": "L_SELECT",
+                    "name": "Eka level",
+                    "db": "nivel_eka_en",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "dynamic": "",
+                        "static": {
+                            "values": {
+                                "nivel 0": "0",
+                                "nivel 1": "1",
+                                "nivel 2": "2",
+                                "nivel 3": "3",
+                                "nivel 4": "4",
+                                "nivel 5": "5",
+                                "nivel 6": "6",
+                                "nivel 7": "7",
+                                "nivel 8": "8",
+                                "nivel 9": "9",
+                                "nivel 10": "10"
+                            }
+                        }
+                    }
+                },
+                "cv": {
+                    "type": "L_EDITDIV",
+                    "name": "Curriculum",
+                    "db": "curriculum_en",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            }
+
+        },
+        "midia": null,
+        "export": null,
+        "search": null,
+        "link": null
+    },
+    "JGROUPS": {
+        "table": "grupos",
+        "name": "group",
+        "submenu": ["Ficha", "Notas"],
+        "admin": {
+            "private": {
+                "toke": {
+                    "type": null,
+                    "name": "ID",
+                    "db": "id",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "icon": {
+                    "type": null,
+                    "name": "Icon",
+                    "db": null,
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identifier": {
+                    "type": null,
+                    "name": "Nome",
+                    "db": "nome",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "notes": {
+                    "type": null,
+                    "name": "Notas",
+                    "db": null,
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "publish": {
+                    "type": null,
+                    "name": "Publicar",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": ["facebook"]
+                },
+                "order": {
+                    "type": null,
+                    "name": "order index",
+                    "db": "order_index",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "folder": {
+                    "type": "L_INPUT",
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "status": {
+                    "type": null,
+                    "name": "Estado",
+                    "db": null,
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "offline": "offline",
+                        "online": "online"
+                    }
+                }
+            },
+            "public": {
+                "name": "Dados de Gestão",
+                "date": {
+                    "type": "S_DATE",
+                    "name": "Inserido",
+                    "db": "data",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                },
+                "date_act": {
+                    "type": "S_DATE",
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                },
+                "mode": {
+                    "type": null,
+                    "name": "tipo",
+                    "db": "mode",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            }
+        },
+        "fields_open": {
+            "group_data": {
+                "name": "Dados do grupo",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Nome",
+                    "db": "nome",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "obs": {
+                    "type": "L_EDITDIV",
+                    "name": "observações",
+                    "db": "obs",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            },
+            "members_data": {
+                "name": "Dados dos membros",
+                "option1": {
+                    "type": "S_SELECT",
+                    "name": "campo 1",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "members_data_select1",
+                        "dynamic": null,
+                        "static": {
+                            "values": {
+                                "Relacionamento": "REL",
+                                "Categoria": "CAT",
+                                "Sexo": "GND",
+                                "Estado civil": "CVS",
+                                "Profissão": "PRF",
+                                "Ramo de actividade": "ACT",
+                                "Pais": "CNT",
+                                "Distrito": "STT",
+                                "Cidade": "CTY",
+                                "Código postal": "CPT"
+                            }
+                        }
+                    }
+                },
+                "option2": {
+                    "type": "S_SELECT",
+                    "name": "campo 2",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "target": "members_data_select2",
+                        "dynamic": null,
+                        "static": {
+                            "values": {
+                                "Relacionamento": "REL",
+                                "Categoria": "CAT",
+                                "Sexo": "GND",
+                                "Estado civil": "CVS",
+                                "Profissão": "PRF",
+                                "Ramo de actividade": "ACT",
+                                "Pais": "CNT",
+                                "Distrito": "STT",
+                                "Cidade": "CTY",
+                                "Código postal": "CPT"
+                            }
+                        }
+                    }
+                },
+                "select1": {
+                    "type": "S_SELECT",
+                    "name": "opções",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "dynamic": null,
+                        "static": null
+                    }
+                },
+                "select2": {
+                    "type": "S_SELECT",
+                    "name": "opções",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "dynamic": null,
+                        "static": null
+                    }
+                },
+                "all_members": {
+                    "type": "L_NEDITDIV",
+                    "name": "membros",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            }
+        },
+        "fields_close": {
+            "group_data": {
+                "name": "Dados do grupo",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Nome",
+                    "db": "nome",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "obs": {
+                    "type": "L_EDITDIV",
+                    "name": "observações",
+                    "db": "obs",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            },
+            "group": {
+                "name": "Dados dos membros",
+                "fold": {
+                    "type": "S_NEDITDIV",
+                    "name": "opções",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "members": {
+                    "type": "S_NEDITDIV",
+                    "name": "membros",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "data-type": "selCont,selPasta"
+                    }
+                }
+            }
+        },
+        "midia": null,
+        "export": null,
+        "require": {
+            "contacts": "JCONTACTS"
+        }
+    },
+    "JHOMEPAGE": {
+        "table": "outras_paginas",
+        "name": "homepage",
+        "admin": {
+            "private": {
+                "toke": {
+                    "type": null,
+                    "name": "ID",
+                    "db": "id",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "icon": {
+                    "type": null,
+                    "name": "Icon",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identifier": {
+                    "type": null,
+                    "name": "Nome",
+                    "db": "nome",
+                    "help": "",
+                    "text": "",
+                    "options": ""
+                },
+                "notes": {
+                    "type": null,
+                    "name": "Notas",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "publish": {
+                    "type": null,
+                    "name": "Publicar",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "order": {
+                    "type": null,
+                    "name": "order index",
+                    "db": null,
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "folder": {
+                    "type": "S_INPUT",
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "status": {
+                    "type": "S_RADIOB",
+                    "name": "Estado",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            },
+            "public": {
+                "name": "Dados de Gestão",
+                "date_act": {
+                    "type": "S_DATE",
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "help": "Data em que o contato foi atualizado pela última vez.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                }
+            }
+        },
+        "fields": {},
+        "Mensagem": {
+            "pt": {
+                "name": "Mensagem",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "titulo",
+                    "db": "titulo",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "text": {
+                    "type": "L_EDITDIV",
+                    "name": "Texto",
+                    "db": "texto",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            },
+            "en": {
+                "name": "Mensagem",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "titulo",
+                    "db": "titulo_en",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "text": {
+                    "type": "L_EDITDIV",
+                    "name": "Texto",
+                    "db": "texto_en",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            }
+        },
+        "Baia 1": {
+            "pt": {
+                "name": "Baia 1",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Titulo",
+                    "db": "titulo",
+                    "help": "LINE",
+                    "text": "",
+                    "options": null
+                },
+                "text": {
+                    "type": "L_EDITDIV",
+                    "name": "Texto",
+                    "db": "texto",
+                    "help": "",
+                    "text": "",
+                    "options": ""
+                },
+                "link": {
+                    "type": "L_INPUT",
+                    "name": "Link",
+                    "db": "link",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "placeholder": "http://www.exemplo.com/exemplo"
+                    }
+                }
+            },
+            "en": {
+                "name": "Box 1",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Titulo",
+                    "db": "titulo_en",
+                    "help": "LINE",
+                    "text": "",
+                    "options": null
+                },
+                "text": {
+                    "type": "L_EDITDIV",
+                    "name": "Texto",
+                    "db": "texto_en",
+                    "help": "",
+                    "text": "",
+                    "options": ""
+                },
+                "link": {
+                    "type": "L_INPUT",
+                    "name": "Link",
+                    "db": "link_en",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "placeholder": "http://www.exemplo.com/exemplo"
+                    }
+                }
+            }
+        },
+        "Baia 2": {
+            "pt": {
+                "name": "Baia 2",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "titulo",
+                    "db": "titulo",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "text": {
+                    "type": "L_EDITDIV",
+                    "name": "Texto",
+                    "db": "texto",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "link": {
+                    "type": "L_INPUT",
+                    "name": "Link",
+                    "db": "link",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "placeholder": "http://www.exemplo.com/exemplo"
+                    }
+                }
+            },
+            "en": {
+                "name": "Baia 2",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Title",
+                    "db": "titulo_en",
+                    "help": "LINE",
+                    "text": "",
+                    "options": null
+                },
+                "text": {
+                    "type": "L_EDITDIV",
+                    "name": "Text",
+                    "db": "texto_en",
+                    "help": "BOX",
+                    "text": "contentEditable='true' class='diveditable'",
+                    "options": null
+                },
+                "link": {
+                    "type": "L_INPUT",
+                    "name": "Link",
+                    "db": "link_en",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "placeholder": "http://www.exemplo.com/exemplo"
+                    }
+                }
+            }
+        },
+
+        "Baia 3": {
+            "pt": {
+                "name": "Baia 3",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "titulo",
+                    "db": "titulo",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "text": {
+                    "type": "L_EDITDIV",
+                    "name": "Texto",
+                    "db": "texto",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "link": {
+                    "type": "L_INPUT",
+                    "name": "Link",
+                    "db": "link",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "placeholder": "http://www.exemplo.com/exemplo"
+                    }
+                }
+            },
+            "en": {
+                "name": "Baia 3",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Title",
+                    "db": "titulo_en",
+                    "help": "LINE",
+                    "text": "",
+                    "options": null
+                },
+                "text": {
+                    "type": "L_EDITDIV",
+                    "name": "Text",
+                    "db": "texto_en",
+                    "help": "BOX",
+                    "text": "contentEditable='true' class='diveditable'",
+                    "options": null
+                },
+                "link": {
+                    "type": "L_INPUT",
+                    "name": "Link",
+                    "db": "link_en",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "placeholder": "http://www.exemplo.com/exemplo"
+                    }
+                }
+            }
+        },
+        "Banners": {
+            "pt": {
+                "name": "Banners",
+                "image": {
+                    "type": "L_IMAGE",
+                    "name": "Foto",
+                    "db": "imagens",
+                    "help": "",
+                    "text": "[ tamanho recomendado: 1600px X 600px ]",
+                    "options": {
+                        "image_name": "image_pt",
+                        "captions": "captions_pt",
+                        "data-size": 4
+                    }
+                }
+            },
+            "en": {
+                "name": "Banners",
+                "image": {
+                    "type": "L_IMAGE",
+                    "name": "Foto",
+                    "db": "imagens_en",
+                    "help": "",
+                    "text": "[ tamanho recomendado: 1200px X 640px ]",
+                    "options": {
+                        "image_name": "image_en",
+                        "captions": "captions_en",
+                        "data-size": 4
+                    }
+                }
+            }
+        },
+        "Video": {
+            "pt": {
+                "name": "Video",
+                "video": {
+                    "type": "L_VIDEO",
+                    "name": "Video",
+                    "db": "video",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            }
+        },
+        "Privacidade": {
+            "pt": {
+                "name": "Politica de privacidade",
+                "text": {
+                    "type": "L_EDITDIV",
+                    "name": "Texto",
+                    "db": "texto",
+                    "help": "",
+                    "text": "",
+                    "options": ""
+                }
+            },
+            "en": {
+                "name": "Politica de privacidade",
+                "text": {
+                    "type": "L_EDITDIV",
+                    "name": "Text",
+                    "db": "texto_en",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            }
+        },
+        "Cursos": {
+            "midia": {
+                "name": "Foto",
+                "image": {
+                    "type": "L_IMAGE",
+                    "name": "Foto",
+                    "db": "imagens",
+                    "help": "",
+                    "text": "[ tamanho recomendado: 1200px X 640px ]",
+                    "options": {
+                        "image_name": "image_c",
+                        "captions": "captions_c",
+                        "data-size": 1
+                    }
+                }
+            },
+            "pt": {
+                "name": "Cursos",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Titulo",
+                    "db": "titulo",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "text": {
+                    "type": "L_EDITDIV",
+                    "name": "Texto",
+                    "db": "texto",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            },
+            "en": {
+                "name": "Cursos",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Title",
+                    "db": "titulo_en",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "text": {
+                    "type": "L_EDITDIV",
+                    "name": "Text",
+                    "db": "texto_en",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            },
+            "link": {
+                "pt": {
+                    "url": "http://kyusho.pt/pt/cursos",
+                    "param": null
+                },
+                "en": {
+                    "url": "http://kyusho.pt/en/course",
+                    "param": null
+                }
+            }
+        }
+    },
+    "JNET": {
+        "table": "redes sociais",
+        "name": "redes",
+        "submenu": [],
+        "admin": {
+            "private": {
+                "toke": {
+                    "type": null,
+                    "name": "ID",
+                    "db": "id",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "icon": {
+                    "type": null,
+                    "name": "Icon",
+                    "db": "logo",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identifier": {
+                    "type": null,
+                    "name": "Nome",
+                    "db": "nome",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "notes": {
+                    "type": null,
+                    "name": "Notas",
+                    "db": "notas",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "publish": {
+                    "type": null,
+                    "name": "Publicar",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "order": {
+                    "type": null,
+                    "name": "order index",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "folder": {
+                    "type": "S_INPUT",
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "status": {
+                    "type": null,
+                    "name": "Estado",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            },
+            "public": {
+                "name": "Dados de Gestão",
+                "date": {
+                    "type": "",
+                    "name": "Inserido",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "date_act": {
+                    "type": "S_DATE",
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "help": "Data em que o contato foi atualizado pela última vez.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                }
+            }
+        },
+        "fields": null,
+        "Facebook": {
+            "config": {
+                "name": "Dados",
+                "image": {
+                    "type": "L_IMAGE",
+                    "name": "Logo",
+                    "db": "logo",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "image_name": "logo_config",
+                        "captions": null,
+                        "data-size": 1
+                    }
+                },
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Titulo",
+                    "db": "titulo",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "type": {
+                    "type": "L_INPUT",
+                    "name": "Tipo",
+                    "db": "tipo",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "url": {
+                    "type": "L_INPUT",
+                    "name": "Endereço",
+                    "db": "url",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "name_f": {
+                    "type": "L_INPUT",
+                    "name": "Nome",
+                    "db": "nome_face",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "adm": {
+                    "type": "L_INPUT",
+                    "name": "Administrador",
+                    "db": "adm_face",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "app": {
+                    "type": "L_INPUT",
+                    "name": "Aplicação",
+                    "db": "app_key",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identi": {
+                    "type": "L_INPUT",
+                    "name": "Id",
+                    "db": "client_id",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "descri": {
+                    "type": "L_TEXTAREA",
+                    "name": "Descrição",
+                    "db": "descricao_face",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            }
+        },
+        "Google": {
+            "config": {
+                "name": "Dados",
+                "image": {
+                    "type": "L_IMAGE",
+                    "name": "Logo",
+                    "db": "logo",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "image_name": "logo_config",
+                        "captions": "",
+                        "data-size": 1
+                    }
+                },
+                "ana_id": {
+                    "type": "L_INPUT",
+                    "name": "Id analytics",
+                    "db": "g_analytics_id",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "ana_code": {
+                    "type": "L_INPUT",
+                    "name": "Código analytics",
+                    "db": "g_analytics",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "maps_key": {
+                    "type": "L_INPUT",
+                    "name": "Chave maps",
+                    "db": "g_maps_key",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "token": {
+                    "type": "L_INPUT",
+                    "name": "Token",
+                    "db": "token",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "app": {
+                    "type": "L_INPUT",
+                    "name": "Chave aplicação",
+                    "db": "app_key",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identi": {
+                    "type": "L_INPUT",
+                    "name": "Id",
+                    "db": "client_id",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "pass": {
+                    "type": "L_INPUT",
+                    "name": "Password",
+                    "db": "client_secret",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "mail": {
+                    "type": "L_INPUT",
+                    "name": "Email",
+                    "db": "mail",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            }
+        }
+    },
+    "JNEWSLETTER": {
+        "table": "newsletter",
+        "name": "newsletter",
+        "submenu": ["Ficha", "Notas"],
+        "admin": {
+            "private": {
+                "toke": {
+                    "type": null,
+                    "name": "ID",
+                    "db": "id_newsletter",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "icon": {
+                    "type": null,
+                    "name": "Icon",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identifier": {
+                    "type": null,
+                    "name": "Titulo",
+                    "db": "titulo",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "notes": {
+                    "type": null,
+                    "name": "",
+                    "db": "notas_newsletter",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "publish": {
+                    "type": null,
+                    "name": "Publicar",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "order": {
+                    "type": null,
+                    "name": "order index",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "folder": {
+                    "type": "L_INPUT",
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "status": {
+                    "type": null,
+                    "name": "Estado",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            },
+            "public": {
+                "name": "Dados de Gestão",
+                "date": {
+                    "type": "L_DATE",
+                    "name": "Criada em",
+                    "db": "data_criacao",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                },
+                "date_act": {
+                    "type": "",
+                    "name": "Última vez enviada",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                }
+            }
+        },
+        "fields": {
+            "comuns": {
+                "name": "Newsletter",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "Titulo",
+                    "db": "titulo",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "content": {
+                    "type": "L_EDITDIV",
+                    "name": "Conteudo",
+                    "db": "conteudo",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "data-type": "newsl"
+                    }
+                }
+            }
+        },
+        "midia": null,
+        "search": null,
+        "export": null
+    },
+    "JNEWSLETTERCONFIG": {
+        "table": "newsletter_config",
+        "name": "newsletterconfig",
+        "submenu": null,
+        "admin": {
+            "private": {
+                "toke": {
+                    "type": null,
+                    "name": "ID",
+                    "db": "id",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "icon": {
+                    "type": null,
+                    "name": "Icon",
+                    "db": "header_news",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identifier": {
+                    "type": null,
+                    "name": "",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "notes": {
+                    "type": null,
+                    "name": "",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "publish": {
+                    "type": null,
+                    "name": "Publicar",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "order": {
+                    "type": null,
+                    "name": "order index",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "folder": {
+                    "type": "",
+                    "name": "",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "status": {
+                    "type": null,
+                    "name": "Estado",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            },
+            "public": {
+                "name": "Dados de Gestão",
+                "date_act": {
+                    "type": "L_DATE",
+                    "name": "Última atualização",
+                    "db": "data_act",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                },
+                "numb": {
+                    "type": "L_INPUT",
+                    "name": "Numero de envios por e-mail",
+                    "db": "numb_mails",
+                    "help": "Para zero ou valores inferiores a zero envia todas as newsletter do primeiro endereço de e-mail definido. No caso de um valor definido, quando esse valor é atingido passa a enviar do próximo endereço de e-mail. Quando enviar de todos os e-mails definidos para a execução mesmo que não tenha enviado para todos os elementos do grupo.",
+                    "text": "Um numero maior que zero",
+                    "options": null
+                }
+            }
+        },
+        "fields": {
+            "mails": {
+                "name": "Endereços",
+                "return_mail": {
+                    "type": "L_INPUT",
+                    "name": "E-mail de resposta",
+                    "db": "return_mail_news",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "send_mail": {
+                    "type": "L_TEXTAREA",
+                    "name": "E-mail de envio",
+                    "db": "send_mail_news",
+                    "help": "",
+                    "text": "Separa com  virgulas(,) os endereços de e-mail",
+                    "options": null
+                }
+            }
+        },
+        "midia": {
+            "midia": {
+                "name": "Cabeçalho",
+                "images": {
+                    "type": "L_IMAGE",
+                    "name": "Imagens",
+                    "db": "header_news",
+                    "help": "",
+                    "text": "[ tamanho recomendado: 800px X 300px ]",
+                    "options": {
+                        "image_name": "newsletter_image",
+                        "captions": "newsletter_captions",
+                        "data-size": 1
+                    }
+                }
+            }
+        },
+        "search": null,
+        "export": null
+    },
+    "JNOTES": {
+        "table": "notas",
+        "fields": {
+            "manag": {
+                "toke": {
+                    "name": "Id",
+                    "db": "id",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "filter": {
+                    "name": "Filtro",
+                    "db": "filtro",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "iten_id": {
+                    "name": "Item id",
+                    "db": "id_newsletter",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "contacts": {
+                    "name": "Contactos",
+                    "db": "contactos",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "date": {
+                    "name": "Data",
+                    "db": "data_envio",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "report": {
+                    "name": "Relatorio",
+                    "db": "relatorio",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "group": {
+                    "name": "Grupo",
+                    "db": "grupo",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                }
+            }
+        }
+    },
+    "JSEO": {
+        "table": "seo",
+        "name": "seo",
+        "submenu": [],
+        "admin": {
+            "private": {
+                "toke": {
+                    "type": null,
+                    "name": "ID",
+                    "db": "id",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "icon": {
+                    "type": null,
+                    "name": "Icon",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "identifier": {
+                    "type": null,
+                    "name": "Nome",
+                    "db": "pagina",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "notes": {
+                    "type": null,
+                    "name": "Notas",
+                    "db": "notas",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "publish": {
+                    "type": "L_CHECKB",
+                    "name": "Publicar",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "order": {
+                    "type": null,
+                    "name": "order index",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "folder": {
+                    "type": "S_INPUT",
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "help": "",
+                    "text": "",
+                    "options": {}
+                },
+                "status": {
+                    "type": "S_RADIOB",
+                    "name": "Estado",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                }
+            },
+            "public": {
+                "name": "Dados de Gestão",
+                "date": {
+                    "type": "",
+                    "name": "Inserido",
+                    "db": "",
+                    "help": "",
+                    "text": "",
+                    "options": null
+                },
+                "date_act": {
+                    "type": "S_DATE",
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "help": "Data em que o contato foi atualizado pela última vez.",
+                    "text": "",
+                    "options": {
+                        "mode": {
+                            "hour": true,
+                            "fill": true
+                        },
+                        "att": {
+                            "readonly": "readonly"
+                        }
+                    }
+                }
+            }
+        },
+        "fields": {
+            "pt": {
+                "name": "SEO",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "titulo",
+                    "db": "titulo",
+                    "help": "Titulo da página",
+                    "text": "",
+                    "options": null
+                },
+                "description": {
+                    "type": "L_TEXTAREA",
+                    "name": "Meta-descrição",
+                    "db": "descricao",
+                    "help": "Pequena descrição sobre o tema da página",
+                    "text": "",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 200
+                    }
+                },
+                "keywords": {
+                    "type": "L_TEXTAREA",
+                    "name": "Palavras chave",
+                    "db": "palavras",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "data-type": "countwords",
+                        "data-divider": ","
+                    }
+                }
+            },
+            "en": {
+                "name": "seo",
+                "title": {
+                    "type": "L_INPUT",
+                    "name": "titulo",
+                    "db": "titulo_en",
+                    "help": "Titulo da página",
+                    "text": "",
+                    "options": null
+                },
+                "description": {
+                    "type": "L_TEXTAREA",
+                    "name": "Meta-descrição",
+                    "db": "descricao_en",
+                    "help": "Pequena descrição sobre o tema da página",
+                    "text": "",
+                    "options": {
+                        "data-type": "countchar",
+                        "data-length": 200
+                    }
+                },
+                "keywords": {
+                    "type": "L_TEXTAREA",
+                    "name": "Palavras chave",
+                    "db": "palavras_en",
+                    "help": "",
+                    "text": "",
+                    "options": {
+                        "data-type": "countwords",
+                        "data-divider": ","
+                    }
+                }
+            }
+        }
+    },
+    "JSITEMAP": {
+        "path": "/var/www/vhosts/kyusho.pt/httpdocs/",
+        "pages": {
+            "_CURSOS": {
+                "table": "workshops",
+                "pt": {
+                    "page": "cursos",
+                    "subpage": "cursos",
+                    "fields": ["id_workshop", "nome"]
+                },
+                "en": {
+                    "page": "training",
+                    "subpage": "training",
+                    "fields": ["id_workshop", "nome_en"]
+                }
+            },
+            "_SEMINARIOS": {
+                "table": "",
+                "pt": {
+                    "page": "cuidados",
+                    "subpage": "",
+                    "fields": ""
+                }
+            },
+            "_FAQS": {
+                "table": "",
+                "pt": {
+                    "page": "faqs",
+                    "subpage": "",
+                    "fields": ""
+                }
+            },
+            "_NEWS": {
+                "table": "news",
+                "pt": {
+                    "page": "pt/noticias",
+                    "subpage": "pt/noticia",
+                    "fields": ["id_noticia", "titulo_noticia"]
+                },
+                "en": {
+                    "page": "en/news",
+                    "subpage": "en/news",
+                    "fields": ["id_noticia", "titulo_noticia_en"]
+                }
+            },
+            "_CONTACTS": {
+                "table": "",
+                "pt": {
+                    "page": "pt/contatos",
+                    "subpage": "",
+                    "fields": ""
+                },
+                "en": {
+                    "page": "en/contacts",
+                    "subpage": "",
+                    "fields": ""
+                }
+            },
+            "_COMPANY": {
+                "table": "",
+                "pt": {
+                    "page": "pt/empresa",
+                    "subpage": "",
+                    "fields": ""
+                }
+            }
+        }
+    }
+}

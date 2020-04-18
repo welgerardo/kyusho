@@ -1,0 +1,93 @@
+RewriteEngine On
+
+rewritecond %{http_host} ^www.kyusho.pt [NC]
+rewriterule ^(.*)$ http://kyusho.pt/$1 [r=301,NC,L]
+
+RewriteRule ^/$ index.php?lang=pt&select=inicio
+
+
+
+RewriteRule ^pt$ index.php?lang=pt&select=inicio
+RewriteRule ^en$ index.php?lang=en&select=home
+
+RewriteRule ^pt/home$ http://gemfix.pt/pt [r=301,NC,L]
+RewriteRule ^pt/inicio$ index.php?lang=pt&select=inicio
+
+RewriteRule ^en/inicio$ http://gemfix.pt/en [r=301,NC,L]
+RewriteRule ^en/home$ index.php?lang=en&select=home
+
+RewriteRule ^pt/training$ http://kyusho.pt/pt/cursos [r=301,NC,L]
+RewriteRule ^pt/cursos$ cursos.php?mode=_CURSOS&lang=pt&select=maquina&page=home&seo=Produtos
+
+RewriteRule ^en/cursos$ http://kyusho.pt/en/trainning [r=301,NC,L]
+RewriteRule ^en/machines$ productos.php?mode=_CURSOS&lang=en&select=machines&page=home&seo=Produtos
+
+RewriteRule ^pt/training$ http://kyusho.pt/pt/cursos [r=301,NC,L]
+RewriteRule ^pt/eventos$ galerias.php?mode=_EVENTOS&lang=pt&select=maquina&page=home&seo=Produtos
+
+RewriteRule ^en/maquina/([0-9]+)/(.*)$ http://gemfix.pt/en/machines/$1/%2 [r=301,NC,L]
+RewriteRule ^pt/eventos/([0-9]+)/(.*)$ galeria.php?id=$1&mode=_EVENTO&lang=pt&select=maquina
+
+RewriteRule ^en/cursos$ http://kyusho.pt/en/trainning [r=301,NC,L]
+RewriteRule ^en/machines$ productos.php?mode=_CURSOS&lang=en&select=machines&page=home&seo=Produtos
+
+RewriteRule ^en/maquina/([0-9]+)/(.*)$ http://gemfix.pt/en/machines/$1/%2 [r=301,NC,L]
+RewriteRule ^pt/cursos/([0-9]+)/(.*)$ curso.php?id=$1&mode=_CURSO&lang=pt&select=maquina
+
+RewriteRule ^pt/cursos/([0-9]+)/(.*)$ http://kyusho.pt/pt/maquina/$1/%2 [r=301,NC,L]
+RewriteRule ^en/(machines)/([0-9]+)/(.*)$ produto.php?id=$2&mode=produto&lang=en&select=machines
+
+RewriteRule ^en/maquina/(.*)$ http://gemfix.pt/en/machines/$1 [r=301,NC,L]
+RewriteRule ^(pt)/(maquina)/((.*))$ productos_1.php?mode=produtos&lang=$1&select=maquina&page=home&cat=$3&seo=$3
+
+RewriteRule ^pt/machines/(.*)$ http://gemfix.pt/pt/maquina/$1 [r=301,NC,L]
+RewriteRule ^(en)/(machines)/((.*))$ productos_1.php?mode=produtos&lang=$1&select=machines&page=home&cat=$3&seo=$3
+
+RewriteRule ^(pt|en)/software$ productos_1.php?mode=softwares&lang=$1&select=software&page=software
+
+RewriteRule ^(pt|en)/strassshop$ compostos.php?id=1&mode=composto&lang=$1&select=strassshop
+
+RewriteRule ^(pt|en)/software/([0-9]+)/(.*)$ produto.php?id=$2&mode=software&lang=$1&select=software
+
+RewriteRule ^(en)/(noticias|news)/([0-9]+)/((.*)+)$ noticia.php?id=$3&mode=_POST&lang=$1&select=news
+RewriteRule ^(pt)/(noticias|news)/([0-9]+)/((.*)+)$ noticia.php?id=$3&mode=_POST&lang=$1&select=noticias
+
+RewriteRule ^(pt)/(noticias|news)$ noticias.php?lang=$1&mode=_POST&select=noticias
+RewriteRule ^(en)/(noticias|news)$ noticias.php?lang=$1&mode=_POST&select=news
+
+RewriteRule ^(pt)/(noticias|news)/((.*)+)$ noticias.php?sub=$3&mode=_POST&lang=$1&select=noticias
+RewriteRule ^(en)/(noticias|news)/((.*)+)$ noticias.php?sub=$3&mode=_POST&lang=$1&select=news
+
+RewriteRule ^(pt)/(contatos|contacts)$ contatos.php?lang=$1&select=contatos
+RewriteRule ^(en)/(contatos|contacts)$ contatos.php?lang=$1&select=contacts
+
+RewriteRule ^(pt|en)/(empresa|about-us)$ empresa.php?lang=$1&select=$2
+
+RewriteRule ^(pt|en)/(termos|terms)$ privacidade.php?lang=$1&page=privacidade
+RewriteRule ^(pt|en)/(recrutamento|work)$ recrutamento.php?lang=$1&page=recrutamento
+
+RewriteRule ^en/sendmessplus$ dinamicCont.php?lang=en
+RewriteRule ^pt/sendmessplus$ dinamicCont.php?lang=pt
+
+RewriteRule ^messages$ dinamicCont.php
+
+RewriteRule ^(pt|en)/sendnews$ dinamicCont.php?lang=$1
+RewriteRule ^sendmess$ /
+
+RewriteRule ^en/traini$ garantia.php?lang=en&page=Formacao
+RewriteRule ^pt/traini$ garantia.php?lang=pt&page=Formacao
+
+RewriteRule ^en/warran$ garantia.php?lang=en&page=garantia
+RewriteRule ^pt/warran$ garantia.php?lang=pt&page=garantia
+
+RewriteRule ^en/rd$ garantia.php?lang=en&page=Desenvolvimento
+RewriteRule ^pt/rd$ garantia.php?lang=pt&page=Desenvolvimento
+
+RewriteRule ^en/assist$ garantia.php?lang=en&page=assistencia
+RewriteRule ^pt/assist$ garantia.php?lang=pt&page=assistencia
+
+RewriteRule ^en/assist$ garantia.php?lang=en&page=assistencia
+RewriteRule ^pt/hora$ fromassis.php?lang=pt&page=hora
+
+
+RewriteRule ^pt/(.*)$ $1

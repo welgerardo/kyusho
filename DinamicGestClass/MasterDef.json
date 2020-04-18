@@ -1,0 +1,1631 @@
+{
+    "JCONTACTS": {
+        "table": "contactos",
+        "name": "contacts",
+        "fields": {
+            "manag": {
+                "name": "Dados de Gestão",
+                "toke": {
+                    "name": "ID",
+                    "db": "id",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "date": {
+                    "name": "Inserido",
+                    "db": "data",
+                    "type": "PARAG",
+                    "att_inside": "class='pmang'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "date_act": {
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "type": "PARAG",
+                    "att_inside": "class='pmang'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "folder": {
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "type": "INPUT",
+                    "att_inside": "id='pasta'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "relation": {
+                    "name": "Relacionamento",
+                    "db": "relacionamento",
+                    "type": "DATALIST",
+                    "target": "",
+                    "options": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "category": {
+                    "name": "Categoria",
+                    "db": "categoria",
+                    "type": "RADIOB",
+                    "members": {
+                        "pessoa": "pessoa",
+                        "empresa": "empresa"
+                    },
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'",
+                    "att_select": "class='smanag backgrey'",
+                    "att_unselect": "class='smanag'"
+                },
+                "send_news": {
+                    "name": "Envia newsletter",
+                    "db": "send_news",
+                    "type": 0,
+                    "target": "",
+                    "options": "",
+                    "att_outside": ""
+                }
+            },
+            "comuns": {
+                "name": "",
+                "profile": {
+                    "name": "Perfil",
+                    "db": "observacoes",
+                    "type": "DIV",
+                    "att_inside": "class='tx75px22xLFF dveditmanag' contenteditable=true",
+                    "att_outside": "class='edit_label w470L' draggable='false'"
+                },
+                "image": {
+                    "name": "Foto",
+                    "db": "imagem",
+                    "type": "DIV",
+                    "att_inside": "class='dveditmanagf' data-size='1'",
+                    "att_outside": "class='edit_label w270R' draggable='false'",
+                    "image_name": "foto_contato",
+                    "captions": null
+                },
+                "mail": {
+                    "name": "E-mail",
+                    "db": "mail",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "webpage": {
+                    "name": "webpage",
+                    "db": "web",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "phone": {
+                    "name": "telefone",
+                    "db": "telefone",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "fax": {
+                    "name": "fax",
+                    "db": "fax",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "cell1": {
+                    "name": "Telemóvel 1",
+                    "db": "telemovel",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "cell2": {
+                    "name": "Telemóvel 2",
+                    "db": "telemovel2",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "cell3": {
+                    "name": "Telemóvel 3",
+                    "db": "telemovel3",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "nif": {
+                    "name": "NIF",
+                    "db": "contribuinte",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "country": {
+                    "name": "Pais",
+                    "db": "pais",
+                    "type": "DATALIST",
+                    "target": "state",
+                    "options": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "state": {
+                    "name": "Distrito",
+                    "db": "distrito",
+                    "type": "DATALIST",
+                    "target": "city",
+                    "options": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "city": {
+                    "name": "Cidade",
+                    "db": "cidade",
+                    "type": "DATALIST",
+                    "target": "village",
+                    "options": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "village": {
+                    "name": "Freguesia",
+                    "db": "freguesia",
+                    "type": "DATALIST",
+                    "target": "",
+                    "options": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "postal": {
+                    "name": "Código postal",
+                    "db": "c_postal",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "address": {
+                    "name": "Endereço",
+                    "db": "rua",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                }
+
+            },
+            "personal": {
+                "name": "Dados pessoais",
+                "title": {
+                    "name": "Nome",
+                    "db": "nome",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "surname": {
+                    "name": "Apelido",
+                    "db": "apelido",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "birthday": {
+                    "name": "Nascimento",
+                    "db": "data_nascimento",
+                    "type": "INPUT",
+                    "att_inside": "placeholder='dd-mm-aaaa'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "sex": {
+                    "name": "Sexo",
+                    "db": "sexo",
+                    "type": "RADIOB",
+                    "members": {
+                        "masculino": "masculino",
+                        "feminino": "feminino"
+                    },
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'",
+                    "att_select": "class='smanag backgrey'",
+                    "att_unselect": "class='smanag'"
+                },
+                "fathername": {
+                    "name": "Nome do pai",
+                    "db": "nome_pai",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "fatherphone": {
+                    "name": "Telefone do pai",
+                    "db": "fone_pai",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "fathermail": {
+                    "name": "E-mail do pai",
+                    "db": "mail_pai",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "mothername": {
+                    "name": "Nome da mãe",
+                    "db": "nome_mae",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "motherphone": {
+                    "name": "Telefone da mãe",
+                    "db": "fone_mae",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "mothermail": {
+                    "name": "Email da mãe",
+                    "db": "mail_mae",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                }
+            },
+            "prof": {
+                "all": {
+                    "name": "Dados profissionais",
+                    "company": {
+                        "name": "Empresa",
+                        "db": "empresa",
+                        "type": "SELECT",
+                        "att_inside": "",
+                        "att_outside": "class='edit_label w140p'"
+                    },
+                    "profession": {
+                        "name": "Profissão",
+                        "db": "profissao",
+                        "type": "DATALIST",
+                        "target": "",
+                        "options": "",
+                        "att_outside": "class='edit_label w140p'"
+                    }
+                },
+                "pt": {
+                    "department": {
+                        "name": "Departamento",
+                        "db": "departamento",
+                        "type": "DATALIST",
+                        "target": "",
+                        "options": "",
+                        "att_outside": "class='edit_label w140p'"
+                    },
+                    "job": {
+                        "name": "Cargo",
+                        "db": "cargo",
+                        "type": "DATALIST",
+                        "target": "",
+                        "options": "",
+                        "att_outside": "class='edit_label w140p'"
+                    }
+                },
+                "en": {
+                    "department": {
+                        "name": "Department",
+                        "db": "departamento_en",
+                        "type": "DATALIST",
+                        "target": "",
+                        "options": "",
+                        "att_outside": "class='edit_label w140p'"
+                    },
+                    "job": {
+                        "name": "Job",
+                        "db": "cargo_en",
+                        "type": "DATALIST",
+                        "target": "",
+                        "options": "",
+                        "att_outside": "class='edit_label w140p'"
+                    }
+                }
+            },
+            "company": {
+                "name": "Dados empresa",
+                "title": {
+                    "name": "Empresa",
+                    "db": "nome",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "business": {
+                    "name": "Negócio",
+                    "db": "ramo_actividade",
+                    "type": "DATALIST",
+                    "target": "",
+                    "options": "",
+                    "att_outside": "class='edit_label w140p'"
+                }
+            }
+        },
+        "folders": {
+            "fields": [["nome", "apelido"], ["mail"]],
+            "manag": {
+                "id": "id",
+                "status": "estado",
+                "destak": ""
+            },
+            "folder": "pasta"
+        },
+        "search": {
+            "query": {
+                "toke": "id",
+                "date": "data",
+                "date_act": "data_act",
+                "folder": "pasta",
+                "category": "categoria",
+                "relation": "relacionamento",
+                "mail": "mail",
+                "webpage": "web",
+                "phone": "telefone",
+                "cell1": "telemóvel 1",
+                "nif": "contribuinte",
+                "country": "pais",
+                "state": "distrito",
+                "city": "cidade",
+                "village": "freguesia",
+                "postal": "c_postal",
+                "name": "nome",
+                "birthday": "data_nascimento",
+                "sex": "sexo",
+                "company": "empresa",
+                "business": "ramo_actividade"
+            },
+            "fields": "id,nome,apelido,mail",
+            "order": "nome"
+        }
+    },
+    "JCOMPANY": {
+        "table": "principal",
+        "name": "company",
+        "submenu": "null",
+        "fields": {
+            "manag": {
+                "name": "Dados de gestão",
+                "toke": {
+                    "name": "id",
+                    "db": "id"
+                },
+                "date_act": {
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "type": "PARAG",
+                    "att_inside": "class='pmang'",
+                    "att_outside": "class='edit_label w140p'"
+                }
+
+            },
+            "comuns": {
+                "name": "Dados da Empresa",
+                "mark": {
+                    "name": "Marca",
+                    "db": "firma",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "company": {
+                    "name": "Nome",
+                    "db": "nome_comercial",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "adress": {
+                    "name": "Morada",
+                    "db": "morada",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "comp": {
+                    "name": "Complemento",
+                    "db": "complemento",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "village": {
+                    "name": "Freguesia",
+                    "db": "freguesia",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "postal": {
+                    "name": "Código postal",
+                    "db": "cp",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "city": {
+                    "name": "Cidade",
+                    "db": "cidade",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "country": {
+                    "name": "Pais",
+                    "db": "pais",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "mail": {
+                    "name": "E-mail",
+                    "db": "mail",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "phone": {
+                    "name": "Telefone",
+                    "db": "telefone",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "fax": {
+                    "name": "Fax",
+                    "db": "fax",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "cell_1": {
+                    "name": "Telemóvel 1",
+                    "db": "telemovel1",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "cell_2": {
+                    "name": "Telemóvel 2",
+                    "db": "telemovel2",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "cell_3": {
+                    "name": "Telemóvel 3",
+                    "db": "telemovel2",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "gps": {
+                    "name": "GPS",
+                    "db": "gps",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "nif": {
+                    "name": "Contribuinte",
+                    "db": "contribuinte",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                }
+
+
+
+            },
+            "media": {
+                "name": "Imagens e Video",
+                "logo": {
+                    "name": "Logotipo",
+                    "db": "logotipo",
+                    "type": "DIV",
+                    "att_inside": "class='dveditmanagf' data-size='1'",
+                    "att_outside": "class='edit_label w790px' draggable='false'",
+                    "image_name": "logo_image",
+                    "captions": "logo_captions"
+                },
+                "company_image": {
+                    "name": "Página empresa",
+                    "db": "foto",
+                    "type": "DIV",
+                    "att_inside": "class='dveditmanagf' data-size='1'",
+                    "att_outside": "class='edit_label w790px' draggable='false'",
+                    "image_name": "comp_image",
+                    "captions": "comp_captions"
+                },
+                "contacts_image": {
+                    "name": "Página contatos",
+                    "db": "foto_contactos",
+                    "type": "DIV",
+                    "att_inside": "class='dveditmanagf' data-size='1'",
+                    "att_outside": "class='edit_label w790px' draggable='false'",
+                    "image_name": "cont_image",
+                    "captions": "cont_captions"
+                }
+            },
+            "pt": {
+                "name": "Sobre a empresa",
+                "aboutus": {
+                    "name": "Quem somos",
+                    "db": "quem_somos",
+                    "type": "DIV",
+                    "att_inside": "contentEditable='true' class='diveditable'",
+                    "att_outside": "class='edit_label w790px'"
+                },
+                "mission": {
+                    "name": "Missão",
+                    "db": "missao",
+                    "type": "DIV",
+                    "att_inside": "contentEditable='true' class='diveditable'",
+                    "att_outside": "class='edit_label w790px'"
+                }
+            }
+        }
+    },
+    "JEMPLOYEES": {
+        "table": "colaboradores",
+        "comuns": {
+            "name": "Dados de acesso",
+            "id": {
+                "name": "Id",
+                "db": "id",
+                "type": 0,
+                "att_inside": "",
+                "att_outside": ""
+            },
+            "contact": {
+                "name": "Id contacto",
+                "db": "id_contacto",
+                "type": 0
+            },
+            "order": {
+                "name": "Ordenação",
+                "db": "order_index",
+                "type": 0,
+                "att_inside": "",
+                "att_outside": ""
+            },
+            "date": {
+                "name": "Autorizado em",
+                "db": "data",
+                "type": "PARAG",
+                "att_inside": "class='pmang'",
+                "att_outside": "class='edit_label w140p'"
+            },
+            "folder": {
+                "name": "Pasta",
+                "db": "pasta",
+                "type": 0,
+                "att_inside": "",
+                "att_outside": ""
+            },
+            "status": {
+                "name": "Estado",
+                "db": "estado",
+                "type": "RADIOB",
+                "members": {
+                    "online": "online",
+                    "offline": "offline"
+                },
+                "att_inside": "",
+                "att_outside": "class='edit_label w70p'",
+                "att_select": "class='smanag backgrey'",
+                "att_unselect": "class='smanag'"
+            },
+            "level": {
+                "name": "Nivel de acesso",
+                "db": "tipo_user",
+                "type": "SELECT",
+                "options": [1, 2, 3, 4],
+                "att_inside": "",
+                "att_outside": "class='edit_label w70p'"
+            },
+            "nick": {
+                "name": "Nick",
+                "db": "nick",
+                "type": "INPUT",
+                "att_inside": "",
+                "att_outside": "class='edit_label w140p'"
+            },
+            "pass": {
+                "name": "Senha",
+                "db": "senha",
+                "type": "INPUT",
+                "label_inside": "<img src='imagens/adicionar22.png' data-action='pass' class='ig10MR'>",
+                "att_inside": "id='senha'",
+                "att_outside": "class='edit_label w140p'"
+            },
+            "title": {
+                "name": "Nome",
+                "db": "nome",
+                "type": 0,
+                "att_inside:": "",
+                "att_outside": ""
+            }
+        }
+
+    },
+    "JGROUPS": {
+        "table": "grupos",
+        "fields": {
+            "manag": {
+                "name": "Dados de gestão",
+                "toke": {
+                    "name": "ID",
+                    "db": "id",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "date": {
+                    "name": "Criado",
+                    "db": "data",
+                    "type": "PARAG",
+                    "att_inside": "class='pmang'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "date_act": {
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "type": "PARAG",
+                    "att_inside": "class='pmang'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "folder": {
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "type": "INPUT",
+                    "att_inside": "id='pasta'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "notes": {
+                    "name": "Notas",
+                    "db": "notas",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                }
+            },
+            "comuns": {
+                "name": "Dados do grupo",
+                "title": {
+                    "name": "Nome",
+                    "db": "nome",
+                    "type": "INPUT",
+                    "att_inside": "draggable='false'",
+                    "att_outside": "class='edit_label w790px'"
+                },
+                "obs": {
+                    "name": "Obs",
+                    "db": "obs",
+                    "type": "DIV",
+                    "att_inside": "class='diveditable' contenteditable=true",
+                    "att_outside": "class='edit_label w790px' draggable='false'"
+                }
+
+
+            }
+            ,
+            "group": {
+                "name": "Opções",
+                "combi_1": {
+                    "name": "Campo 1",
+                    "db": "",
+                    "type": "SELECT",
+                    "att_inside": "id='p_criterio_1'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "combi_2": {
+                    "name": "Campo 2",
+                    "db": "",
+                    "type": "SELECT",
+                    "att_inside": "id='p_criterio_2'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "value_1": {
+                    "name": "",
+                    "db": "",
+                    "type": "INPUT",
+                    "att_inside": "id='p_valor_1'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "value_2": {
+                    "name": "",
+                    "db": "",
+                    "type": "INPUT",
+                    "att_inside": "id='p_valor_2'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "folders": {
+                    "name": "Pastas",
+                    "db": "",
+                    "type": "DIV",
+                    "att_inside": "class='diveditable_folder'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "members": {
+                    "name": "Membros",
+                    "db": "membros",
+                    "type": "DIV",
+                    "att_inside": "class='diveditable_folder' data-type='selCont,selPasta'",
+                    "att_outside": "class='edit_label w140p'"
+                }
+            }
+        },
+        "require": {
+            "contacts": "JCONTACTS"
+        }
+    },
+    "JHOMEPAGE": {
+        "table": "outras_paginas",
+        "name": "homepage",
+        "fields": {
+            "manag": {
+                "toke": {
+                    "name": "id",
+                    "db": "id"
+                },
+                "folder": {
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "type": "INPUT",
+                    "att_inside": "id='pasta'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "date_act": {
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "type": "PARAG",
+                    "att_inside": "class='pmang'",
+                    "att_outside": "class='edit_label w140p'"
+                }
+            },
+            "Mensagem": {
+                "pt": {
+                    "name": "Mensagem",
+                    "title": {
+                        "name": "titulo",
+                        "db": "titulo",
+                        "type": "INPUT",
+                        "att_inside": "",
+                        "att_outside": "class='edit_label w790px'"
+                    },
+                    "text": {
+                        "name": "Texto",
+                        "db": "texto",
+                        "type": "DIV",
+                        "att_inside": "contentEditable='true' class='diveditable'",
+                        "att_outside": "class='edit_label w790px'"
+
+                    }
+                }
+            },
+            "Baia_1": {
+                "pt": {
+                    "name": "Baia 1",
+                    "image": {
+                        "name": "Imagens",
+                        "db": "imagens",
+                        "type": "DIV",
+                        "att_inside": "class='dveditmanagf' data-size='1'",
+                        "att_outside": "class='edit_label w790px' draggable='false'",
+                        "image_name": "image_pt",
+                        "captions": "captions_pt"
+                    },
+                    "title": {
+                        "name": "titulo",
+                        "db": "titulo",
+                        "type": "INPUT",
+                        "att_inside": "",
+                        "att_outside": "class='edit_label w790px'"
+                    },
+                    "link": {
+                        "name": "Link",
+                        "db": "link",
+                        "type": "INPUT",
+                        "att_inside": "placeholder='http://www.exemplo.com/exemplo'",
+                        "att_outside": "class='edit_label w790px'"
+                    }
+
+                }
+            },
+            "Baia_2": {
+                "pt": {
+                    "name": "Baia 2",
+                    "image": {
+                        "name": "Imagens",
+                        "db": "imagens",
+                        "type": "DIV",
+                        "att_inside": "class='dveditmanagf' data-size='1'",
+                        "att_outside": "class='edit_label w790px' draggable='false'",
+                        "image_name": "image_pt",
+                        "captions": "captions_pt"
+                    },
+                    "title": {
+                        "name": "titulo",
+                        "db": "titulo",
+                        "type": "INPUT",
+                        "att_inside": "",
+                        "att_outside": "class='edit_label w790px'"
+                    },
+                    "link": {
+                        "name": "Link",
+                        "db": "link",
+                        "type": "INPUT",
+                        "att_inside": "placeholder='http://www.exemplo.com/exemplo'",
+                        "att_outside": "class='edit_label w790px'"
+                    }
+
+                }
+            },
+            "Baia_3": {
+                "pt": {
+                    "name": "Baia 3",
+                    "image": {
+                        "name": "Imagens",
+                        "db": "imagens",
+                        "type": "DIV",
+                        "att_inside": "class='dveditmanagf' data-size='1'",
+                        "att_outside": "class='edit_label w790px' draggable='false'",
+                        "image_name": "image_pt",
+                        "captions": "captions_pt"
+                    },
+                    "title": {
+                        "name": "titulo",
+                        "db": "titulo",
+                        "type": "INPUT",
+                        "att_inside": "",
+                        "att_outside": "class='edit_label w790px'"
+                    },
+                    "link": {
+                        "name": "Link",
+                        "db": "link",
+                        "type": "INPUT",
+                        "att_inside": "placeholder='http://www.exemplo.com/exemplo'",
+                        "att_outside": "class='edit_label w790px'"
+                    }
+
+                }
+            },
+            "Baia_4": {
+                "pt": {
+                    "name": "Baia 4",
+                    "image": {
+                        "name": "Imagens",
+                        "db": "imagens",
+                        "type": "DIV",
+                        "att_inside": "class='dveditmanagf' data-size='1'",
+                        "att_outside": "class='edit_label w790px' draggable='false'",
+                        "image_name": "image_pt",
+                        "captions": "captions_pt"
+                    },
+                    "title": {
+                        "name": "titulo",
+                        "db": "titulo",
+                        "type": "INPUT",
+                        "att_inside": "",
+                        "att_outside": "class='edit_label w790px'"
+                    },
+                    "link": {
+                        "name": "Link",
+                        "db": "link",
+                        "type": "INPUT",
+                        "att_inside": "placeholder='http://www.exemplo.com/exemplo'",
+                        "att_outside": "class='edit_label w790px'"
+                    }
+
+                }
+            },
+            "baia_5": {
+                "pt": {
+                    "name": "Baia 5",
+                    "image": {
+                        "name": "Imagens",
+                        "db": "imagens",
+                        "type": "DIV",
+                        "att_inside": "class='dveditmanagf' data-size='1'",
+                        "att_outside": "class='edit_label w790px' draggable='false'",
+                        "image_name": "image_pt",
+                        "captions": "captions_pt"
+                    },
+                    "title": {
+                        "name": "titulo",
+                        "db": "titulo",
+                        "type": "INPUT",
+                        "att_inside": "",
+                        "att_outside": "class='edit_label w790px'"
+                    },
+                    "link": {
+                        "name": "Link",
+                        "db": "link",
+                        "type": "INPUT",
+                        "att_inside": "placeholder='http://www.exemplo.com/exemplo'",
+                        "att_outside": "class='edit_label w790px'"
+                    }
+
+                }
+            },
+            "Banners": {
+                "pt": {
+                    "name": "Banners",
+                    "image": {
+                        "name": "Imagens",
+                        "db": "imagens",
+                        "type": "DIV",
+                        "att_inside": "class='dveditmanagf' data-size='1'",
+                        "att_outside": "class='edit_label w790px' draggable='false'",
+                        "image_name": "image_pt",
+                        "captions": "captions_pt"
+                    }
+
+                }
+            },
+            "Privacidade": {
+                "pt": {
+                    "name": "Politica de privacidade",
+                    "text": {
+                        "name": "Texto",
+                        "db": "texto",
+                        "type": "DIV",
+                        "att_inside": "contentEditable='true' class='diveditable'",
+                        "att_outside": "class='edit_label w790px'"
+                    }
+
+                }
+            },
+            "Recrutamento": {
+                "pt": {
+                    "name": "Recrutamento",
+                    "text": {
+                        "name": "Texto",
+                        "db": "texto",
+                        "type": "DIV",
+                        "att_inside": "contentEditable='true' class='diveditable'",
+                        "att_outside": "class='edit_label w790px'"
+                    }
+
+                }
+            }
+        }
+    },
+    "JNET": {
+        "table": "redes sociais",
+        "name": "redes",
+        "fields": {
+            "manag": {
+                "name": "Dados de gestão",
+                "toke": {
+                    "name": "id",
+                    "db": "id"
+                },
+                "folder": {
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "type": "INPUT",
+                    "att_inside": "id='pasta'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "date_act": {
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "type": "PARAG",
+                    "att_inside": "class='pmang'",
+                    "att_outside": "class='edit_label w140p'"
+                }
+            }
+        },
+        "social": {
+            "Facebook": {
+                "name": "Dados",
+                "image": {
+                    "name": "Logo",
+                    "db": "logo",
+                    "type": "DIV",
+                    "att_inside": "class='dveditmanagf' data-size='1'",
+                    "att_outside": "class='edit_label w470L' draggable='false'",
+                    "image_name": "image_net",
+                    "captions": ""
+                },
+                "title": {
+                    "name": "Titulo",
+                    "db": "titulo",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "type": {
+                    "name": "Tipo",
+                    "db": "tipo",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "url": {
+                    "name": "Endereço",
+                    "db": "url",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "name_f": {
+                    "name": "Nome",
+                    "db": "nome_face",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "adm": {
+                    "name": "Administrador",
+                    "db": "adm_face",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "app": {
+                    "name": "Aplicação",
+                    "db": "app_key",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "identi": {
+                    "name": "Id",
+                    "db": "client_id",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "descri": {
+                    "name": "Descrição",
+                    "db": "descricao_face",
+                    "type": "DIV",
+                    "att_inside": "contentEditable='true' class='diveditable'",
+                    "att_outside": "class='edit_label w790px'"
+                }
+
+
+            },
+            "Google": {
+                "name": "Dados",
+                "image": {
+                    "name": "Logo",
+                    "db": "logo",
+                    "type": "DIV",
+                    "att_inside": "class='dveditmanagf' data-size='1'",
+                    "att_outside": "class='edit_label w470L' draggable='false'",
+                    "image_name": "image_net",
+                    "captions": ""
+                },
+                "ana_id": {
+                    "name": "Id analytics",
+                    "db": "g_analytics_id",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "ana_code": {
+                    "name": "Código analytics",
+                    "db": "g_analytics",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "maps_key": {
+                    "name": "Chave maps",
+                    "db": "g_maps_key",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "token": {
+                    "name": "Token",
+                    "db": "token",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "app": {
+                    "name": "Chave aplicação",
+                    "db": "app_key",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "identi": {
+                    "name": "Id",
+                    "db": "client_id",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "pass": {
+                    "name": "Password",
+                    "db": "client_secret",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "mail": {
+                    "name": "Email",
+                    "db": "mail",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w140p'"
+                }
+
+
+            }
+        }
+    },
+    "JNEWS": {
+        "table": "news",
+        "name": "news",
+        "submenu": ["Ficha", "Notas"],
+        "fields": {
+            "manag": {
+                "name": "Dados de gestão",
+                "toke": {
+                    "name": "id",
+                    "db": "id_noticia"
+                },
+                "date": {
+                    "name": "Inserida",
+                    "db": "data_noticia",
+                    "type": "PARAG",
+                    "att_inside": "class='pmang'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "date_act": {
+                    "name": "Atualizada",
+                    "db": "data_act",
+                    "type": "PARAG",
+                    "att_inside": "class='pmang'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "status": {
+                    "name": "Estado",
+                    "db": "estado",
+                    "type": "RADIOB",
+                    "members": {
+                        "online": "online",
+                        "offline": "offline"
+                    },
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w70p'",
+                    "att_select": "class='smanag backgrey'",
+                    "att_unselect": "class='smanag'"
+                },
+                "destak": {
+                    "name": "Destaque",
+                    "db": "destaque",
+                    "type": "CHECKB",
+                    "members": {
+                        "destak": "destaque"
+                    },
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w70p'",
+                    "att_select": "class='smanag backgrey'",
+                    "att_unselect": "class='smanag'"
+                },
+                "folder": {
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "type": "INPUT",
+                    "att_inside": "id='pasta'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "publish": {
+                    "name": "Publicar",
+                    "db": "",
+                    "type": "CHECKB",
+                    "members": {
+                        "publish_face": "facebook",
+                        "publish_rss": "rss"
+                    },
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w790px'",
+                    "att_select": "class='smanag backgrey'",
+                    "att_unselect": "class='smanag'"
+                },
+                "notes": {
+                    "name": "Notas",
+                    "db": "notas",
+                    "type": null,
+                    "att_inside": "",
+                    "att_outside": ""
+                }
+
+            },
+            "news_format": {
+                "name": "Formato noticia",
+                "format": {
+                    "name": "Formato",
+                    "db": "formato_noticia",
+                    "type": "RADIOB",
+                    "members": {
+                        "news1": "<img src='imagens/news1.png'>",
+                        "news2": "<img src='imagens/news2.png'>",
+                        "news3": "<img src='imagens/news3.png'>",
+                        "news4": "<img src='imagens/news4.png'>",
+                        "news5": "<img src='imagens/news_5.png'>",
+                        "news6": "<img src='imagens/news_6.png'>",
+                        "news7": "<img src='imagens/news_7.png'>"
+                    },
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w790px'",
+                    "att_select": "class='radiow backgrey'",
+                    "att_unselect": "class='radiow'"
+                }
+            },
+            "comuns": {
+                "name": "Imagens e Video",
+                "images": {
+                    "name": "Imagens",
+                    "db": "fotos_noticia",
+                    "type": "DIV",
+                    "att_inside": "class='dveditmanagf' data-size='3'",
+                    "att_outside": "class='edit_label w470L' draggable='false'",
+                    "image_name": "news_image",
+                    "captions": "news_captions"
+                },
+                "video": {
+                    "name": "Video",
+                    "db": "video_noticias",
+                    "type": "DIV",
+                    "att_inside": "class='dveditmanagf'",
+                    "att_outside": "class='edit_label w270R' draggable='false'"
+                }
+            },
+            "pt": {
+                "name": "Texto noticia",
+                "topic": {
+                    "name": "Topico",
+                    "db": "categoria",
+                    "type": "DATALIST",
+                    "target": "",
+                    "options": "",
+                    "att_outside": "class='edit_label w790px'"
+                },
+                "title": {
+                    "name": "Titulo",
+                    "db": "titulo_noticia",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w790px'"
+                },
+                "subtitle": {
+                    "name": "Sub titulo",
+                    "db": "subtitulo_noticia",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w790px'"
+                },
+                "author": {
+                    "name": "Autor",
+                    "db": "autor_noticia",
+                    "type": "DATALIST",
+                    "target": "",
+                    "options": "",
+                    "att_outside": "class='edit_label w790px'"
+                },
+                "text": {
+                    "name": "Texto",
+                    "db": "texto_noticia",
+                    "type": "DIV",
+                    "att_inside": "contentEditable='true' class='diveditable'",
+                    "att_outside": "class='edit_label w790px'"
+                }
+            },
+            "en": {
+                "name": "News text",
+                "topic": {
+                    "name": "Topic",
+                    "db": "categoria_en",
+                    "type": "DATALIST",
+                    "target": "",
+                    "options": "",
+                    "att_outside": "class='edit_label w790px'"
+                },
+                "title": {
+                    "name": "Title",
+                    "db": "titulo_noticia_en",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w790px'"
+                },
+                "subtitle": {
+                    "name": "Subtitle",
+                    "db": "subtitulo_noticia_en",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w790px'"
+                },
+                "author": {
+                    "name": "Author",
+                    "db": "autor_noticia_en",
+                    "type": "DATALIST",
+                    "target": "",
+                    "options": "",
+                    "att_outside": "class='edit_label w790px'"
+                },
+                "text": {
+                    "name": "Text",
+                    "db": "texto_noticia_en",
+                    "type": "DIV",
+                    "att_inside": "contentEditable='true' class='diveditable'",
+                    "att_outside": "class='edit_label w790px'"
+                }
+            }
+
+        },
+        "export": {
+            "pt": {
+                "name": "rss_noticias",
+                "table": "news",
+                "toke": "id_noticia",
+                "date": "data_act",
+                "title": "titulo_noticia",
+                "text": "texto_noticia",
+                "link": "blog",
+                "image": "fotos_noticia",
+                "shortlink": "n",
+                "conditions": {
+                    "estado": "online"
+                }
+            },
+            "en": {
+                "name": "rss_news",
+                "table": "news",
+                "toke": "id_noticia",
+                "date": "data_act",
+                "title": "titulo_noticia_en",
+                "text": "texto_noticia_en",
+                "link": "post",
+                "image": "fotos_noticia",
+                "shortlink": "p",
+                "conditions": {
+                    "estado": "online"
+                }
+            }
+        },
+        "search": {
+            "query": {
+                "toke": "id_noticia",
+                "date": "data_noticia",
+                "date_act": "data_act",
+                "status": "estado",
+                "category": ["categoria", "categoria_en"],
+                "title": ["titulo_noticia", "titulo_noticia_en"]
+            },
+            "fields": "id_noticia,data_act,titulo_noticia,estado",
+            "order": "titulo_noticia"
+        },
+        "link": {
+            "pt": {
+                "url": "http://www.futurekids-braga.com/blog",
+                "param": ["id_noticia", "titulo_noticia"]
+            },
+            "en": {
+                "url": "http://www.futurekids-braga.com/blog",
+                "param": ["id_noticia", "titulo_noticia_en"]
+            }
+        },
+        "require": {
+            "rssfeed": "_RSSFEEDS"
+        }
+    },
+    "JNEWSLETTER": {
+        "table": "newsletter",
+        "fields": {
+            "manag": {
+                "name": "Dados de gestão",
+                "toke": {
+                    "name": "ID",
+                    "db": "id",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "folder": {
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "type": "INPUT",
+                    "att_inside": "id='pasta'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "date": {
+                    "name": "Data",
+                    "db": "data_cria",
+                    "type": "PARAG",
+                    "att_inside": "class='pmang'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "date_send": {
+                    "name": "Último envio",
+                    "db": "data_envio",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w790px'"
+                },
+                "send_to": {
+                    "name": "Enviada para",
+                    "db": "send_to",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "notes": {
+                    "name": "Notas",
+                    "db": "notas",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                }
+
+            },
+            "comuns": {
+                "name": "Newsletter",
+                "title": {
+                    "name": "Titulo",
+                    "db": "titulo",
+                    "type": "INPUT",
+                    "att_inside": "draggable='false'",
+                    "att_outside": "class='edit_label w790px'"
+                },
+                "content": {
+                    "name": "Conteudo",
+                    "db": "conteudo",
+                    "type": "DIV",
+                    "att_inside": "contentEditable='true' class='diveditable'  data-type='newsl' style='text-align:center'",
+                    "att_outside": "class='edit_label w790px' draggable='false'"
+                }
+            }
+        },
+        "require": {
+            "newsletterconfig": "JNEWSLETTERCONFIG",
+            "groups": "JGROUPS",
+            "contacts": "JCONTACTS",
+            "news": "JNEWS",
+            "products": "JPRODUCTS",
+            "services": "JSERVICES"
+        }
+    },
+    "JNEWSLETTERCONFIG": {
+        "table": "config",
+        "fields": {
+            "manag": {
+                "name": "Dados de gestão",
+                "send_mail": {
+                    "name": "E-mail de envio",
+                    "db": "send_mail_news",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w790px'"
+                },
+                "return_mail": {
+                    "name": "E-mail de resposta",
+                    "db": "return_mail_news",
+                    "type": "INPUT",
+                    "att_inside": "",
+                    "att_outside": "class='edit_label w790px'"
+                },
+                "header": {
+                    "name": "Cabeçalho",
+                    "db": "header_news",
+                    "type": "DIV",
+                    "att_inside": "class='dveditmanagf' data-size='1'",
+                    "att_outside": "class='edit_label w790px' draggable='false'",
+                    "image_name": "newsletter_image",
+                    "captions": "newsletter_captions"
+                }
+
+            }
+        }
+    },
+    "JNOTES": {
+        "table": "notas",
+        "fields": {
+            "manag": {
+                "toke": {
+                    "name": "Id",
+                    "db": "id",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "filter": {
+                    "name": "Filtro",
+                    "db": "filtro",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "iten_id": {
+                    "name": "Item id",
+                    "db": "id_newsletter",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "contacts": {
+                    "name": "Contactos",
+                    "db": "contactos",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "date": {
+                    "name": "Data",
+                    "db": "data_envio",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "report": {
+                    "name": "Relatorio",
+                    "db": "relatorio",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                },
+                "group": {
+                    "name": "Grupo",
+                    "db": "grupo",
+                    "type": 0,
+                    "att_inside": "",
+                    "att_outside": ""
+                }
+            }
+
+        }
+    },
+    "JSEO": {
+        "table": "seo",
+        "name": "seo",
+        "fields": {
+            "manag": {
+                "name": "Dados de gestão",
+                "toke": {
+                    "name": "id",
+                    "db": "id"
+                },
+                "folder": {
+                    "name": "Pasta",
+                    "db": "pasta",
+                    "type": "INPUT",
+                    "att_inside": "id='pasta'",
+                    "att_outside": "class='edit_label w140p'"
+                },
+                "date_act": {
+                    "name": "Atualizado",
+                    "db": "data_act",
+                    "type": "PARAG",
+                    "att_inside": "class='pmang'",
+                    "att_outside": "class='edit_label w140p'"
+                }
+            },
+            "comuns": {
+                "pt": {
+                    "name": "Dados",
+                    "descri": {
+                        "name": "Descrição",
+                        "db": "descricao",
+                        "type": "DIV",
+                        "label_inside": "<span class='spR159w' >caracteres disponiveis:<span id='hmpt'></span></span>",
+                        "att_inside": "contentEditable='true' class='diveditable' data-type='countchar' data-target='hmpt' data-length='270'",
+                        "att_outside": "class='edit_label w790px' "
+                    },
+                    "keyw": {
+                        "name": "Palavras chave",
+                        "db": "palavras",
+                        "type": "DIV",
+                        "att_inside": "contentEditable='true' class='diveditable'",
+                        "att_outside": "class='edit_label w790px'"
+                    }
+                }
+            }
+        }
+    }
+
+}

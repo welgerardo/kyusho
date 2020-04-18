@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        	               <urlset  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+                                   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+                               <url>
+                                  <loc>http://kyusho.pt/</loc>
+                                  <changefreq>weekly</changefreq>    
+                               </url>
+                               
+                               <url>
+                                 <loc>http://kyusho.pt/cursos</loc>
+                                 <changefreq>weekly</changefreq>    
+                               </url>
+                               <url>
+                                 <loc>http://kyusho.pt/cursos/6/Futurekids Camps Verão 2014</loc>
+			                     <changefreq>weekly</changefreq>    
+                               </url>
+			            
+                               <url>
+                                 <loc>http://kyusho.pt/training</loc>
+                                 <changefreq>weekly</changefreq>    
+                               </url>
+                               <url>
+                                 <loc>http://kyusho.pt/training/6/sdasdasd</loc>
+			                     <changefreq>weekly</changefreq>    
+                               </url>
+			            
+                               <url>
+                                 <loc>http://kyusho.pt/cuidados</loc>
+                                 <changefreq>weekly</changefreq>    
+                               </url>
+                               <url>
+                                 <loc>http://kyusho.pt/faqs</loc>
+                                 <changefreq>weekly</changefreq>    
+                               </url>
+                               <url>
+                                 <loc>http://kyusho.pt/pt/noticias</loc>
+                                 <changefreq>weekly</changefreq>    
+                               </url>
+                               <url>
+                                 <loc>http://kyusho.pt/pt/noticia/311/SEO - Otimização para motores de busca.</loc>
+			                     <changefreq>weekly</changefreq>    
+                               </url>
+			            
+                               <url>
+                                 <loc>http://kyusho.pt/pt/noticia/330/A Futurekids-Braga aposta na internet.</loc>
+			                     <changefreq>weekly</changefreq>    
+                               </url>
+			            
+                               <url>
+                                 <loc>http://kyusho.pt/pt/noticia/331/A internet é a segunda mídia mais popular nos Estados Unidos.</loc>
+			                     <changefreq>weekly</changefreq>    
+                               </url>
+			            
+                               <url>
+                                 <loc>http://kyusho.pt/pt/noticia/334/Novo site da Risko Tattoo</loc>
+			                     <changefreq>weekly</changefreq>    
+                               </url>
+			            
+                               <url>
+                                 <loc>http://kyusho.pt/pt/noticia/335/10 Novos empregos que quase não existiam há 5 anos atrás.</loc>
+			                     <changefreq>weekly</changefreq>    
+                               </url>
+			            
+                               <url>
+                                 <loc>http://kyusho.pt/en/news</loc>
+                                 <changefreq>weekly</changefreq>    
+                               </url>
+                               <url>
+                                 <loc>http://kyusho.pt/en/news/311/titulo_noticia_en</loc>
+			                     <changefreq>weekly</changefreq>    
+                               </url>
+			            
+                               <url>
+                                 <loc>http://kyusho.pt/en/news/330/titulo_noticia_en</loc>
+			                     <changefreq>weekly</changefreq>    
+                               </url>
+			            
+                               <url>
+                                 <loc>http://kyusho.pt/en/news/331/titulo_noticia_en</loc>
+			                     <changefreq>weekly</changefreq>    
+                               </url>
+			            
+                               <url>
+                                 <loc>http://kyusho.pt/en/news/334/titulo_noticia_en</loc>
+			                     <changefreq>weekly</changefreq>    
+                               </url>
+			            
+                               <url>
+                                 <loc>http://kyusho.pt/en/news/335/titulo_noticia_en</loc>
+			                     <changefreq>weekly</changefreq>    
+                               </url>
+			            
+                               <url>
+                                 <loc>http://kyusho.pt/pt/contatos</loc>
+                                 <changefreq>weekly</changefreq>    
+                               </url>
+                               <url>
+                                 <loc>http://kyusho.pt/en/contacts</loc>
+                                 <changefreq>weekly</changefreq>    
+                               </url>
+                               <url>
+                                 <loc>http://kyusho.pt/pt/empresa</loc>
+                                 <changefreq>weekly</changefreq>    
+                               </url>        
+                               </urlset>                       
+
+                

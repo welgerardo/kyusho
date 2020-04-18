@@ -1,0 +1,115 @@
+@charset "utf-8";
+html,body
+{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../imagens/home_dinamicgest.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+    background-color: #FFFFFF;
+    height: 100%;
+    position: relative;
+}
+
+.log
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #5F74A3;
+	text-align: left;
+	font-weight:bold;
+
+}
+.log2
+{
+	text-align: center;
+	color: #FFF;
+	border-bottom: 1px solid #FFFFFF;
+	background-repeat:no-repeat;
+	height: 30px;
+	margin-bottom: 15px;
+}
+.log2 img{
+    display: inline-block;
+    float: left;
+}
+.user{
+
+    background-position:2px 0px;
+    background-image:url('../imagens/log_icons.png');
+    padding-left:30px;
+}
+.pass{
+    background-position:2px -35px;
+    background-image:url('../imagens/log_icons.png');
+    padding-left:30px;
+
+}
+.digit{
+    width:25px;
+    height:25px;
+    vertical-align:middle;
+    padding-left:2px;
+}
+#tdaviso{
+    text-align:center;
+    margin-top: 25px;
+    border:none;
+    padding:0;
+    color: #FFFF99;
+    font-size:14px;
+    font-weight: bold;
+
+}
+.divLogin
+{
+	width:40%;
+	height:100%;
+	overflow: hidden;
+	margin:0 auto;
+	text-align:center;
+	background-image:url('../imagens/dinamicgest_homepage.png');
+	background-position:center bottom;
+	background-repeat:no-repeat;
+	background-color: rgb(23,116,157);
+	position: relative;
+}
+.dglogo{
+    margin:50px auto 0;
+    display: block;
+}
+.tablog
+{
+	width:60%;
+	border:0px;
+	text-align: left;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin:40% auto  0;
+	color:#FFF;
+}
+div.tablog input
+{
+    background-color: rgb(23,116,157);
+    font: 18px verdana, arial, helvetica, sans-serif;
+    color:#FFFFFF;
+    width: 80%;
+    border: solid 2px rgb(23,116,157);
+    padding-left:5px;
+    text-align:center;
+    display: inline-block;
+    vertical-align:middle;
+}
+div.tablog input[type="button"]
+{
+    background-color: rgb(23,116,157);
+    font: 18px verdana, arial, helvetica, sans-serif;
+    color:#FFFFFF;
+    width: 80%;
+    border: solid 2px #FFF;
+    text-align:center;
+    display: inline-block;
+    margin:10px 10% 0;
+
+}
